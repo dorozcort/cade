@@ -41,6 +41,7 @@ $gray-color: #f4f4f4;
 html,
 body {
   font-family: 'Open Sans', sans-serif;
+
 }
 
 
@@ -93,6 +94,7 @@ a.active {
       color: $red-color;
       margin-left: 1rem;
       font-size: 2rem;
+
       @media (max-width:990px) {
         font-size: 1.25rem;
       }
@@ -123,24 +125,25 @@ p {
     font-size: 1rem;
   }
 
-  .side-border-container{
+  .side-border-container {
     width: 10%;
   }
-  .title-container-width{
+
+  .title-container-width {
     width: 80%;
   }
 }
 
-@media (min-width:990px){
+@media (min-width:990px) {
 
-.hide-desktop{
-  display: none;
-}
-}
-
-@media (max-width:990px){
-
-  .hide-mobile{
+  .hide-desktop {
     display: none;
   }
+}
+
+@media (max-width:990px) {
+
+  .hide-mobile {
+    display: none;
   }
+}

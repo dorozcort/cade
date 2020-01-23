@@ -9600,24 +9600,33 @@ p {
 
 header .main-navigation {
   min-height: 80px;
-  background: #fff;
+  background: transparent;
   padding: 20px 7%; }
   header .main-navigation .nav-link {
-    padding-right: 1.25em !important;
-    padding-left: 1.25rem !important;
-    font-size: 1.5625rem; }
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #003060;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif; }
     @media screen and (max-width: 1868px) {
       header .main-navigation .nav-link {
-        font-size: .9rem; } }
+        font-size: 1.1rem; } }
 
 header .logo {
-  width: 20rem; }
+  width: 13rem; }
   @media (max-width: 768px) {
     header .logo {
       width: 15rem; } }
 
+header .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem; }
+
 footer {
-  background: #333333;
   color: #fff;
   padding: 3.125rem; }
   @media (max-width: 768px) {
