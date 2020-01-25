@@ -9627,8 +9627,10 @@ header .social {
   padding: 0.5rem; }
 
 footer {
-  color: #fff;
-  padding: 3.125rem; }
+  color: #003060;
+  padding: 3.125rem;
+  display: contents;
+  text-align: center; }
   @media (max-width: 768px) {
     footer .row-footer {
       display: contents;
@@ -9656,7 +9658,6 @@ footer {
         margin-top: 30px; } }
 
 section {
-  padding: 6.25rem 0;
   position: relative; }
   @media (max-width: 990px) {
     section {
@@ -9675,13 +9676,18 @@ section {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   min-height: 100vh;
   background: url(/assets/img/img-section1-background.jpg) center center;
   background-size: cover;
   padding-bottom: 0; }
+  .Section-1 .img-home {
+    position: absolute; }
+  .Section-1 .text-home {
+    background-color: #003060;
+    width: 40rem;
+    padding: 30px;
+    color: white;
+    position: relative; }
   @media (max-width: 990px) {
     .Section-1 .mobile-margin-bottom {
       margin: 50px;
@@ -9771,6 +9777,8 @@ section {
 
 .Section-2 {
   min-height: 100vh; }
+  .Section-2 .text-socios {
+    position: absolute; }
   .Section-2 .slick-track {
     display: -webkit-box;
     display: -ms-flexbox;
