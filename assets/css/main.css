@@ -9504,22 +9504,26 @@ body {
   position: relative; }
 
 .Section1 .Section1-text {
-  background-color: blue;
+  background-color: #003060;
   position: absolute;
   color: white;
   top: 50%;
   right: 0;
-  width: 400px;
+  width: 554px;
   padding: 30px;
   margin-right: -50px;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%); }
+          transform: translateY(-50%);
+  font-size: 17px; }
 
 .Section2 {
   padding: 0 15%; }
   .Section2 .Section2-text {
-    padding: 25px;
-    text-align: center; }
+    padding-top: 40px;
+    text-align: center;
+    font-size: 17px;
+    color: gray;
+    margin-top: 20px; }
   .Section2 .Section2-carousel {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -9538,5 +9542,42 @@ body {
       width: 100%;
       -webkit-filter: grayscale(1);
               filter: grayscale(1); }
+
+.Section-4 .Section4-text {
+  padding-right: 200px; }
+  .Section-4 .Section4-text .Section4-text1 {
+    color: #77aede; }
+  .Section-4 .Section4-text .Section4-text2 {
+    color: #003060;
+    font-size: 3.2rem;
+    font-weight: 600; }
+  .Section-4 .Section4-text .Section4-text3 {
+    color: #727272; }
+
+.Section-5 .news-container {
+  background: #003060;
+  background-size: cover;
+  padding: 20px;
+  height: 280px;
+  margin: 5px;
+  border-bottom: 10px solid #77aede; }
+  .Section-5 .news-container .news-text1 {
+    color: #ffd500; }
+  .Section-5 .news-container .news-text2 {
+    color: white;
+    font-size: 18px; }
+  .Section-5 .news-container .news-text3 {
+    color: #ffd500;
+    font-size: 18px; }
+
+.Section-5 .destacada-container {
+  background: url(/assets/img/img-nyn.jpeg) no-repeat;
+  min-height: 100vh;
+  background-size: cover;
+  color: white;
+  font-size: 25px; }
+  .Section-5 .destacada-container .destacada-text {
+    padding: 25px 140px 0px 25px;
+    font-weight: 400; }
 
 /*# sourceMappingURL=main.css.map */
