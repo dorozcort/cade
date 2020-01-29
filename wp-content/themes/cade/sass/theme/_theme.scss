@@ -1,5 +1,74 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
 
-.bg-primary {
-  border-bottom: 5px solid #000;
+// FONTS
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&display=swap');
+
+// VARIABLES
+
+$blue-color: #003060;
+
+// LAYOUT
+
+#page {
+  background: url(/cade/wp-content/themes/cade/img/img-background-cade.jpg) no-repeat;
+  background-size: cover;
+}
+
+*,
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+// SECTION 1
+
+.Section1 {
+  .Section1-container {
+    position: relative;
+  }
+
+  .Section1-text {
+    background-color: $blue-color;
+    position: absolute;
+    color: white;
+    top: 50%;
+    right: 0;
+    width: 500px;
+    padding: 30px;
+    margin-right: -50px;
+    transform: translateY(-50%);
+  }
+
+}
+
+// SECTION 2
+
+
+.Section2 {
+
+  padding: 0 15%;
+
+
+  .Section2-text {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .Section2-carousel {
+    display: flex;
+
+
+    .container-carousel {
+      padding: 10px 20px;
+      display: flex;
+      align-content: center;
+      align-items: center;
+    }
+
+    .img-carousel {
+      width: 100%;
+      filter: grayscale(1);
+    }
+  }
+
 }
