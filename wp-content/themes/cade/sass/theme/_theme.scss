@@ -72,3 +72,79 @@ body {
   }
 
 }
+
+// SECTION 4
+
+.Section4 {
+
+  .col-same-height {
+    align-items: stretch;
+  }
+
+  .Section4-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .arrow {
+    border: solid #77aede;
+    border-width: 0 0.125rem 0.125rem 0;
+    display: inline-block;
+    padding: 1.5rem;
+  }
+
+  .arrow-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(135deg);
+  }
+
+  .arrow-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+  }
+
+  .carousel-indicators li {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #77aede;
+    background-clip: padding-box;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    opacity: 1;
+    transition: opacity .6s ease;
+    border-radius: 35%;
+
+    &.active {
+      background-color: #ffd500;
+    }
+  }
+
+
+  .Section4-text {
+    padding: 75px 200px 75px 50px;
+
+    .Section4-text1 {
+      color: #77aede;
+    }
+
+    .Section4-text2 {
+      color: #003060;
+      font-size: 3.2rem;
+      font-weight: 600;
+
+    }
+
+    .Section4-text3 {
+      color: #727272;
+    }
+  }
+}

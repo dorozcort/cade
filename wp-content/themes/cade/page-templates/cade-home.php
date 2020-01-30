@@ -116,6 +116,47 @@ $container = get_theme_mod('understrap_container_type');
 			</div>
 	</section>
 
+	<!-- Section 4 -->
+
+	<section class="Section4" id="proyectos">
+		<div id="Proyectos-carousel" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<div class="row col-same-height">
+						<div class="col-sm-6 Section4-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/img-proyectoscarousel.jpeg')">
+
+						</div>
+						<div class=" Section4-text col-sm-6">
+							<div class="Section4-text1">
+								<h2>Proyectos</h2>
+							</div>
+							<div class="Section4-text2">
+								<p>Lorem ipsum<br>dolor sit amet, </p>
+							</div>
+							<div class="Section4-text3">
+								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a class="carousel-control-prev " href="#Proyectos-carousel" role="button" data-slide="prev">
+				<span class="arrow arrow-prev" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next " href="#Proyectos-carousel" role="button" data-slide="next">
+				<span class="arrow arrow-next" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</section>
+
 	<div class="<?php echo esc_attr($container); ?> p-0" id="content">
 
 		<div class="row">
