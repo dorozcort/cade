@@ -1,5 +1,19 @@
 .footer {
-    .footer-container {
-        color: transparent;
+    padding: 50px 0px 50px 30px;
+
+    .footer-text {
+        font-size: 20px;
+        color: #003060;
+        display: flex;
+        align-content: center;
+
+        .footer-element {
+            padding: 5px;
+            display: flex;
+            align-content: center;
+            display: flex;
+            align-items: center;
+        }
+
     }
 }
