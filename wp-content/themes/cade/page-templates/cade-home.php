@@ -24,7 +24,7 @@ $container = get_theme_mod('understrap_container_type');
 
 	<!-- CONTENT STARTS -->
 	<!-- Section 1  -->
-	<section class="Section1" id="nosotros">
+	<section class="Section1">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-sm-10 px-0">
@@ -114,6 +114,79 @@ $container = get_theme_mod('understrap_container_type');
 					</div>
 				</div>
 			</div>
+	</section>
+
+	<!-- Section 3 -->
+
+	<section class="Section3" id="nosotros">
+
+		<div class="img-backgraund container-fluid">
+			<div class="row">
+				<div class="col-sm-7 offset-sm-3">
+					<div class="Section3-header">
+						<h1>Nosotros</h1>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="box1">
+								<div class="box1-text1">
+									Abarcamos toda la cadena de producción para impulsar el desarrollo del potencial energético del
+									país.
+								</div>
+								<div class="box1-text2">
+									<h1>Enfocados en la energía generada por el petróleo y gas de <b>Vaca Muerta.</b></h1>
+									<img src="<?php echo get_template_directory_uri(); ?>/img/icn-box1.svg">
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-8">
+							<div class="row col-same-height">
+								<div class="col-sm-4">
+									<div class="box2">
+										<div class="box-title">
+											Lorem ipsum
+										</div>
+										<div class="box-subtitle">
+											<h1>XX</h1>
+											<img src="<?php echo get_template_directory_uri(); ?>/img/icn-box2.svg">
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="box3">
+										<div class="box-title">
+											Lorem ipsum
+										</div>
+										<div class="box-subtitle">
+											<h1>XX</h1>
+											<img src="<?php echo get_template_directory_uri(); ?>/img/icn-box3.svg">
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="box4">
+										<div class="box4-text">
+											Lorem ipsum dolor sit amet, consectetuer adipiscing
+										</div>
+										<img src="<?php echo get_template_directory_uri(); ?>/img/icn-box4.svg">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="box5">
+										<h1 class="box5-tittle">Impulsamos el desarrollo</h1>
+										<p class="box5-text">Consideramos que el desarrollo de los recursos energéticos permitirá el
+											crecimiento de la actividad productiva y la expansión económica, promoviendo el progreso del país.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
 
 	<!-- Section 4 -->
