@@ -1,9 +1,17 @@
-.nav-item {
-    .nav-link {
-        color: #003060;
-        text-align: center;
+.header {
+    .navbar-nav {
+        padding-left: 176px;
+
+        .nav-item {
+            color: #003060;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .nav-element {
+            display: flex;
+            align-items: center;
+            padding: 0px 5px;
+        }
     }
-
-    .nav-social {}
-
 }
