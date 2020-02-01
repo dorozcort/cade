@@ -193,6 +193,12 @@ $container = get_theme_mod('understrap_container_type');
 								'post_type' => 'noticia',
 								'showposts' => 4,
 								'order' => 'ASC',
+								'meta_query' => array(
+									array(
+										'key'   => 'destacada',
+										'value' => '0',
+									)
+								)
 							);
 
 							$proyecto_query = new WP_Query($args);
@@ -219,14 +225,35 @@ $container = get_theme_mod('understrap_container_type');
 						</div>
 					</div>
 					<div class="col-sm-6 margin-botom-1 pr-0">
-						<div class="destacada-container" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/img-section5.jpeg')">
-							<div class="destacada-text">
-								<h2>GRANDES OPERADORAS APUESTAN A CREAR UNA NUEVA CÁMARA EMPRESARIAL</h2>
-								<p>Las principales empresas energéticas del país quieren formar una nueva cámara que las represente
-									frente a las autoridades y otros sectores.</p>
-							</div>
+						<?php
+						$args = array(
+							'post_type' => 'noticia',
+							'showposts' => 1,
+							'order' => 'DESC',
+							'meta_query' => array(
+								array(
+									'key'   => 'destacada',
+									'value' => '1',
+								)
+							)
+						);
 
-						</div>
+						$proyecto_query = new WP_Query($args);
+						?>
+						<?php while ($proyecto_query->have_posts()) : $proyecto_query->the_post(); ?>
+
+
+							<?php $link = get_field('enlace'); ?>
+
+							<a href="<?php echo esc_url($link); ?>" target="_blank" class="destacada-container" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
+								<div class="destacada-text">
+									<h2><?php the_title(); ?></h2>
+									<p><?php the_content(); ?></p>
+								</div>
+
+							</a>
+						<?php endwhile; ?>
+						<?php wp_reset_postdata(); ?>
 					</div>
 				</div>
 			</div>

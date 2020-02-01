@@ -78,6 +78,8 @@ body {
 
 .Section4 {
 
+  box-shadow: 0 10px 10px -5px #bebebe;
+
   .col-same-height {
     align-items: stretch;
   }
@@ -225,6 +227,7 @@ body {
     background-size: cover;
     color: white;
     font-size: 25px;
+    display: block;
 
     .destacada-text {
       padding: 25px 140px 0px 25px;
