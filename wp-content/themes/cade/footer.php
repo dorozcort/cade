@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer.
  *
@@ -8,16 +9,16 @@
  */
 
 // Exit if accessed directly.
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
-$container = get_theme_mod( 'understrap_container_type' );
+$container = get_theme_mod('understrap_container_type');
 ?>
 
-<?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
+<?php get_template_part('sidebar-templates/sidebar', 'footerfull'); ?>
 
 <div class="wrapper" id="wrapper-footer">
 
-	<div class="<?php echo esc_attr( $container ); ?>">
+	<div class="<?php echo esc_attr($container); ?>">
 
 		<div class="row">
 
@@ -25,15 +26,16 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<footer class="site-footer" id="colophon">
 
-					<div class="site-info">
+					<div class="site-info" id="contacto">
 
-						<?php understrap_site_info(); ?>
+						Contacto: <a href="mailto:info@cadenergia.org">info@cadenergia.org</a> | <a href="tel:+5491148728374">+5411 4872-8374</a>
 
 					</div><!-- .site-info -->
 
 				</footer><!-- #colophon -->
 
-			</div><!--col end -->
+			</div>
+			<!--col end -->
 
 		</div><!-- row end -->
 
@@ -48,4 +50,3 @@ $container = get_theme_mod( 'understrap_container_type' );
 </body>
 
 </html>
-

@@ -24,7 +24,7 @@ $container = get_theme_mod('understrap_container_type');
 
 	<!-- CONTENT STARTS -->
 	<!-- Section 1  -->
-	<section class="Section1" id="home">
+	<section class="Section1" id="nosotros">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-sm-10 px-0">
@@ -48,7 +48,7 @@ $container = get_theme_mod('understrap_container_type');
 
 	<!-- Section 2 -->
 
-	<section class="Section2" id="proyectos">
+	<section class="Section2">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 px-0">
@@ -180,7 +180,7 @@ $container = get_theme_mod('understrap_container_type');
 
 <!-- Section 5 -->
 
-<section class="Section5" id="noticiasynovedades">
+<section class="Section5" id="noticias">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-10 px-0 offset-sm-2">

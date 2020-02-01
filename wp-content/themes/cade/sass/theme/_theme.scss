@@ -8,17 +8,51 @@
 
 $blue-color: #003060;
 $yellow-color: #ffd500;
+$gray-color: #727272;
 
 // LAYOUT
 
 #page {
   background: url(/cade/wp-content/themes/cade/img/img-background-cade.jpg) no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 *,
 body {
   font-family: 'Roboto', sans-serif;
+}
+
+// HEADER MENU
+
+.header-menu {
+
+  .nav-link {
+    color: $blue-color;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+
+  .menu-item {
+    display: flex;
+    align-items: center;
+
+    &:after {
+      content: "|";
+      padding: .5rem;
+    }
+  }
+
+  .social-networks-container {
+    a {
+      margin: .5rem;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 // SECTION 1
@@ -44,11 +78,10 @@ body {
 
 // SECTION 2
 
-
 .Section2 {
 
   padding: 0 15%;
-
+  color: $gray-color;
 
   .Section2-text {
     padding: 25px;
@@ -78,7 +111,11 @@ body {
 
 .Section4 {
 
-  box-shadow: 0 10px 10px -5px #bebebe;
+  padding: 3.125rem 0;
+
+  .carousel {
+    box-shadow: 0 10px 10px -5px #bebebe;
+  }
 
   .col-same-height {
     align-items: stretch;
@@ -160,7 +197,7 @@ body {
 
 
 .Section5 {
-  padding: 50px 0;
+  padding: 3.125rem 0 9.5rem;
 
   .align-stretch {
     align-items: stretch;
@@ -236,4 +273,15 @@ body {
   }
 
 
+}
+
+// Footer
+
+.site-info {
+  font-size: 1.5rem;
+  text-align: center;
+
+  a {
+    color: $blue-color
+  }
 }

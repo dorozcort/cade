@@ -127,3 +127,102 @@ function bf_register_custom_post_type_1()
 
 	register_post_type('proyecto', $args);
 }
+
+// Logo
+
+function themename_custom_logo_setup()
+{
+	$defaults = array(
+		'height'      => 100,
+		'width'       => 400,
+		'flex-height' => true,
+		'flex-width'  => true,
+		'header-text' => array('site-title', 'site-description'),
+	);
+	add_theme_support('custom-logo', $defaults);
+}
+add_action('after_setup_theme', 'themename_custom_logo_setup');
+
+// Social Networks
+
+function mytheme_customize_register($wp_customize)
+{
+
+	$wp_customize->add_section(
+		'understrap_theme_social_networks',
+		array(
+			'title'       => __('Social Networks', 'understrap'),
+			'capability'  => 'edit_theme_options',
+			'description' => __('Links to Social Networks', 'understrap'),
+			'priority'    => 160,
+		)
+	);
+
+	// ..repeat ->add_setting() and ->add_control() for mytheme_company-division
+}
+add_action('customize_register', 'mytheme_customize_register');
+
+// Hola
+
+function starter_customize_register($wp_customize)
+{
+	$wp_customize->add_section('starter_new_section_name', array(
+		'title'    => __('Social Networks', 'starter'),
+		'priority' => 30
+	));
+
+	$wp_customize->add_setting('facebook_setting_name', array(
+		'default'   => '',
+		'transport' => 'refresh',
+	));
+
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'facebook',
+			array(
+				'label'    => __('Facebook', 'understrap'),
+				'section'  => 'starter_new_section_name',
+				'settings' => 'facebook_setting_name',
+				'type'     => 'text'
+			)
+		)
+	);
+
+	$wp_customize->add_setting('twitter_setting_name', array(
+		'default'   => '',
+		'transport' => 'refresh',
+	));
+
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'twitter',
+			array(
+				'label'    => __('Twitter', 'understrap'),
+				'section'  => 'starter_new_section_name',
+				'settings' => 'twitter_setting_name',
+				'type'     => 'text'
+			)
+		)
+	);
+
+	$wp_customize->add_setting('instagram_setting_name', array(
+		'default'   => '',
+		'transport' => 'refresh',
+	));
+
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'instagram',
+			array(
+				'label'    => __('Instagram', 'understrap'),
+				'section'  => 'starter_new_section_name',
+				'settings' => 'instagram_setting_name',
+				'type'     => 'text'
+			)
+		)
+	);
+}
+add_action('customize_register', 'starter_customize_register');
