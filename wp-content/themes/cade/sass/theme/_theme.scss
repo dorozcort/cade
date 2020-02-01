@@ -85,6 +85,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    max-height: 34.375rem;
   }
 
   .arrow {
@@ -131,6 +132,7 @@ body {
 
   .Section4-text {
     padding: 75px 200px 75px 50px;
+    min-height: 31.25rem;
 
     .Section4-text1 {
       color: #77aede;
@@ -145,6 +147,10 @@ body {
 
     .Section4-text3 {
       color: #727272;
+      max-height: 200px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: initial;
     }
   }
 }

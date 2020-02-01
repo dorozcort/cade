@@ -119,73 +119,94 @@ $container = get_theme_mod('understrap_container_type');
 	<!-- Section 4 -->
 
 	<section class="Section4" id="proyectos">
+
+		<?php
+		$args = array(
+			'post_type' => 'proyecto',
+			'showposts' => 10
+		);
+
+		$proyecto_query = new WP_Query($args);
+		?>
+
 		<div id="Proyectos-carousel" class="carousel slide" data-ride="carousel">
 			<ol class="carousel-indicators">
-				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-				<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-				<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-				<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+				<?php while ($proyecto_query->have_posts()) : $proyecto_query->the_post(); ?>
+					<li data-target="#Proyectos-carousel" data-slide-to="<?php echo $proyecto_query->current_post ?>" class="<?php echo $proyecto_query->current_post >= 1 ? '' : 'active'; ?>""></li>
+			<?php endwhile; ?>
+			<?php wp_reset_postdata(); ?>
 			</ol>
-			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<div class="row col-same-height">
-						<div class="col-sm-6 Section4-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/img-proyectoscarousel.jpeg')">
-
-						</div>
-						<div class=" Section4-text col-sm-6">
-							<div class="Section4-text1">
-								<h2>Proyectos</h2>
-							</div>
-							<div class="Section4-text2">
-								<p>Lorem ipsum<br>dolor sit amet, </p>
-							</div>
-							<div class="Section4-text3">
-								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<a class="carousel-control-prev " href="#Proyectos-carousel" role="button" data-slide="prev">
-				<span class="arrow arrow-prev" aria-hidden="true"></span>
-				<span class="sr-only">Previous</span>
-			</a>
-			<a class="carousel-control-next " href="#Proyectos-carousel" role="button" data-slide="next">
-				<span class="arrow arrow-next" aria-hidden="true"></span>
-				<span class="sr-only">Next</span>
-			</a>
-		</div>
-	</section>
-
-	<div class="<?php echo esc_attr($container); ?> p-0" id="content">
-
-		<div class="row">
-
-			<div class="col-md-12 content-area" id="primary">
-
-				<main class="site-main" id="main" role="main">
-
-					<?php while (have_posts()) : the_post(); ?>
-
-						<?php get_template_part('loop-templates/content', 'page'); ?>
-
+			<div class=" carousel-inner">
 						<?php
-						// If comments are open or we have at least one comment, load up the comment template.
-						if (comments_open() || get_comments_number()) :
-							comments_template();
-						endif;
-						?>
+						$args = array(
+							'post_type' => 'proyecto',
+							'showposts' => 10
+						);
 
-					<?php endwhile; // end of the loop.
+						$proyecto_query = new WP_Query($args);
+						?>
+						<?php while ($proyecto_query->have_posts()) : $proyecto_query->the_post(); ?>
+							<div class="carousel-item <?php echo $proyecto_query->current_post >= 1 ? '' : 'active'; ?>">
+								<div class="row col-same-height">
+									<div class="col-sm-6 Section4-image" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
+
+									</div>
+									<div class=" Section4-text col-sm-6">
+										<div class="Section4-text1">
+											<h2>Proyectos</h2>
+										</div>
+										<div class="Section4-text2">
+											<h1><?php the_title(); ?></h1>
+										</div>
+										<div class="Section4-text3">
+											<p><?php the_content(); ?></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						<?php endwhile; ?>
+						<?php wp_reset_postdata(); ?>
+		</div>
+		<a class="carousel-control-prev " href="#Proyectos-carousel" role="button" data-slide="prev">
+			<span class="arrow arrow-prev" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="carousel-control-next " href="#Proyectos-carousel" role="button" data-slide="next">
+			<span class="arrow arrow-next" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+</div>
+</section>
+
+<div class="<?php echo esc_attr($container); ?> p-0" id="content">
+
+	<div class="row">
+
+		<div class="col-md-12 content-area" id="primary">
+
+			<main class="site-main" id="main" role="main">
+
+				<?php while (have_posts()) : the_post(); ?>
+
+					<?php get_template_part('loop-templates/content', 'page'); ?>
+
+					<?php
+					// If comments are open or we have at least one comment, load up the comment template.
+					if (comments_open() || get_comments_number()) :
+						comments_template();
+					endif;
 					?>
 
-				</main><!-- #main -->
+				<?php endwhile; // end of the loop.
+				?>
 
-			</div><!-- #primary -->
+			</main><!-- #main -->
 
-		</div><!-- .row end -->
+		</div><!-- #primary -->
 
-	</div><!-- #content -->
+	</div><!-- .row end -->
+
+</div><!-- #content -->
 
 </div><!-- #full-width-page-wrapper -->
 
