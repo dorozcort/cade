@@ -82,40 +82,7 @@ function bf_register_custom_post_type()
 	register_post_type('noticia', $args);
 }
 
-// Lo enganchamos en la acción init y llamamos a la función create_book_taxonomies() cuando arranque
-add_action('init', 'create_book_taxonomies', 0);
-
-// Creamos dos taxonomías, género y autor para el custom post type "noticia"
-function create_book_taxonomies()
-{
-	/* Configuramos las etiquetas que mostraremos en el escritorio de WordPress */
-	$labels = array(
-		'name'             => _x('Géneros', 'taxonomy general name'),
-		'singular_name'    => _x('Género', 'taxonomy singular name'),
-		'search_items'     =>  __('Buscar por Género'),
-		'all_items'        => __('Todos los Géneros'),
-		'parent_item'      => __('Género padre'),
-		'parent_item_colon' => __('Género padre:'),
-		'edit_item'        => __('Editar Género'),
-		'update_item'      => __('Actualizar Género'),
-		'add_new_item'     => __('Añadir nuevo Género'),
-		'new_item_name'    => __('Nombre del nuevo Género'),
-	);
-
-	/* Registramos la taxonomía y la configuramos como jerárquica (al estilo de las categorías) */
-	register_taxonomy('genero', array('noticia'), array(
-		'hierarchical'       => true,
-		'labels'             => $labels,
-		'show_ui'            => true,
-		'query_var'          => true,
-		'rewrite'            => array('slug' => 'genero'),
-	));
-
-	/* Si quieres añadir la siguiente taxonomía del ejemplo, sustituye esta línea por la del código correspondiente */
-}
-
 // Proyectos
-
 
 add_action('init', 'bf_register_custom_post_type_1');
 /**

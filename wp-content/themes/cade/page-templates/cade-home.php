@@ -178,35 +178,61 @@ $container = get_theme_mod('understrap_container_type');
 </div>
 </section>
 
-<div class="<?php echo esc_attr($container); ?> p-0" id="content">
+<!-- Section 5 -->
 
-	<div class="row">
+<section class="Section5" id="noticiasynovedades">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-10 px-0 offset-sm-2">
+				<h2 class="Title">Noticias <span>& Novedades</span></h2>
+				<div class="row align-stretch mr-0">
+					<div class="col-sm-6">
+						<div class="row">
+							<?php
+							$args = array(
+								'post_type' => 'noticia',
+								'showposts' => 4,
+								'order' => 'ASC',
+							);
 
-		<div class="col-md-12 content-area" id="primary">
+							$proyecto_query = new WP_Query($args);
+							?>
+							<?php while ($proyecto_query->have_posts()) : $proyecto_query->the_post(); ?>
+								<div class="col-sm-6 mb-3">
+									<?php
+									$link = get_field('enlace'); ?>
 
-			<main class="site-main" id="main" role="main">
+									<a href="<?php echo esc_url($link); ?>" class="news-container" target="_blank">
+										<div class="news-text0">
+											<span><?php the_field('pretitulo'); ?></span>
+										</div>
+										<div class="news-text1">
+											<h4><?php the_title(); ?></h4>
+										</div>
+										<div class="news-text2">
+											<p><?php the_content(); ?></p>
+										</div>
+									</a>
+								</div>
+							<?php endwhile; ?>
+							<?php wp_reset_postdata(); ?>
+						</div>
+					</div>
+					<div class="col-sm-6 margin-botom-1 pr-0">
+						<div class="destacada-container" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/img-section5.jpeg')">
+							<div class="destacada-text">
+								<h2>GRANDES OPERADORAS APUESTAN A CREAR UNA NUEVA CÁMARA EMPRESARIAL</h2>
+								<p>Las principales empresas energéticas del país quieren formar una nueva cámara que las represente
+									frente a las autoridades y otros sectores.</p>
+							</div>
 
-				<?php while (have_posts()) : the_post(); ?>
-
-					<?php get_template_part('loop-templates/content', 'page'); ?>
-
-					<?php
-					// If comments are open or we have at least one comment, load up the comment template.
-					if (comments_open() || get_comments_number()) :
-						comments_template();
-					endif;
-					?>
-
-				<?php endwhile; // end of the loop.
-				?>
-
-			</main><!-- #main -->
-
-		</div><!-- #primary -->
-
-	</div><!-- .row end -->
-
-</div><!-- #content -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
 </div><!-- #full-width-page-wrapper -->
 
