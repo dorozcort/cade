@@ -87,7 +87,7 @@
     }
 
     .box1-text2 {
-      padding: 10px 31px 2px 74px;
+      padding: 10px 31px 2px 73px;
       font-size: 18px;
       color: #003060;
     }
@@ -104,6 +104,12 @@
 
     height: 150px;
 
+    .box2-text {
+      padding: 10px 81px 2px 16px;
+      font-size: 20px;
+      color: white;
+    }
+
   }
 
   .box3 {
@@ -114,6 +120,12 @@
     background-position: bottom right;
 
     height: 150px;
+
+    .box3-text {
+      padding: 10px 81px 2px 16px;
+      font-size: 20px;
+      color: white;
+    }
 
   }
 
@@ -134,7 +146,7 @@
   }
 
   .box5 {
-    padding-top: 40px;
+    padding: 40px 10px;
     margin-right: 200px;
 
     .box5-tittle {
@@ -142,7 +154,8 @@
     }
 
     .box5-text {
-      font-size: 20px;
+      font-size: 25px;
+      color: #727272;
     }
   }
 }
