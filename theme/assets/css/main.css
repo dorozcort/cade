@@ -9500,6 +9500,13 @@ body {
   min-height: 100vh;
   background-size: cover; }
 
+.nav-item .nav-link {
+  color: #003060;
+  text-align: center; }
+
+.footer .footer-container {
+  color: transparent; }
+
 .Section1 .Section1-container {
   position: relative; }
 
@@ -9543,11 +9550,15 @@ body {
       -webkit-filter: grayscale(1);
               filter: grayscale(1); }
 
+.Section3 .Section3-header {
+  padding: 50px 0px 10px 50px;
+  color: #ffd500; }
+
 .Section3 .img-backgraund {
   background-image: url(/assets/img/img-section3-background.jpg);
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: 5rem;
+  background-position: 6rem;
   min-width: 100%;
   min-height: 460px; }
 
@@ -9558,6 +9569,14 @@ body {
   background-position: right;
   min-width: 100%;
   min-height: 244px; }
+  .Section3 .box1 .box1-text1 {
+    padding: 13px 6px 0px 71px;
+    color: white;
+    font-size: 20px; }
+  .Section3 .box1 .box1-text2 {
+    padding: 10px 31px 2px 74px;
+    font-size: 18px;
+    color: #003060; }
 
 .Section3 .box2 {
   background-color: #727272;
@@ -9581,6 +9600,10 @@ body {
   min-width: 100%;
   height: 150px;
   background-image: url(/assets/img/img-section3-box4.jpg); }
+  .Section3 .box4 .box4-text {
+    padding: 10px 137px 0px 14px;
+    font-size: 19px;
+    color: #003060; }
 
 .Section3 .box5 {
   padding-top: 40px;
@@ -9590,16 +9613,26 @@ body {
   .Section3 .box5 .box5-text {
     font-size: 20px; }
 
-.Section-4 .Section4-text {
-  padding-right: 200px; }
-  .Section-4 .Section4-text .Section4-text1 {
-    color: #77aede; }
-  .Section-4 .Section4-text .Section4-text2 {
-    color: #003060;
-    font-size: 3.2rem;
-    font-weight: 600; }
-  .Section-4 .Section4-text .Section4-text3 {
-    color: #727272; }
+.Section-4 {
+  padding-top: 70px; }
+  .Section-4 .Section4-text {
+    padding-right: 200px; }
+    .Section-4 .Section4-text .Section4-text1 {
+      color: #77aede; }
+    .Section-4 .Section4-text .Section4-text2 {
+      color: #003060;
+      font-size: 3.2rem;
+      font-weight: 600; }
+    .Section-4 .Section4-text .Section4-text3 {
+      color: #727272; }
+
+.Section-5 .Section5-header {
+  padding: 50px 0px 10px 50px;
+  color: #ffd500;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
 
 .Section-5 .news-container {
   background: #003060;
