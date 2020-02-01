@@ -54,7 +54,101 @@
 
 }
 
+.Section3 {
+  .Section3-header {
+    padding: 50px 0px 10px 50px;
+    color: #ffd500;
+
+
+  }
+
+  .img-backgraund {
+    background-image: url(/assets/img/img-section3-background.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 6rem;
+    min-width: 100%;
+    min-height: 460px;
+
+  }
+
+  .box1 {
+    background-image: url(/assets/img/img-section3-box1.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    min-width: 100%;
+    min-height: 244px;
+
+    .box1-text1 {
+      padding: 13px 6px 0px 71px;
+      color: white;
+      font-size: 20px;
+    }
+
+    .box1-text2 {
+      padding: 10px 31px 2px 74px;
+      font-size: 18px;
+      color: #003060;
+    }
+
+
+  }
+
+  .box2 {
+    background-color: #727272;
+    background-image: url(/assets/img/img-section3-box2.png);
+    background-size: 6rem;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+
+    height: 150px;
+
+  }
+
+  .box3 {
+    background-color: #77aede;
+    background-image: url(/assets/img/img-section3-box3.png);
+    background-size: 6rem;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+
+    height: 150px;
+
+  }
+
+  .box4 {
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    min-width: 100%;
+    height: 150px;
+    background-image: url(/assets/img/img-section3-box4.jpg);
+
+    .box4-text {
+      padding: 10px 137px 0px 14px;
+      font-size: 19px;
+      color: #003060;
+
+    }
+  }
+
+  .box5 {
+    padding-top: 40px;
+    margin-right: 200px;
+
+    .box5-tittle {
+      color: #77aede;
+    }
+
+    .box5-text {
+      font-size: 20px;
+    }
+  }
+}
+
 .Section-4 {
+  padding-top: 70px;
 
   .Section4-text {
     padding-right: 200px;
@@ -77,6 +171,13 @@
 }
 
 .Section-5 {
+  .Section5-header {
+    padding: 50px 0px 10px 50px;
+    color: #ffd500;
+    flex-direction: column;
+
+
+  }
 
   .news-container {
     background: #003060;
