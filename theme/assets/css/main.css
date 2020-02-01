@@ -9615,9 +9615,12 @@ body {
   background-repeat: no-repeat;
   background-position: bottom right;
   height: 150px; }
-  .Section3 .box2 .box2-text {
-    padding: 10px 81px 2px 16px;
-    font-size: 20px;
+  .Section3 .box2 .box2-title {
+    padding: 5px 85px 2px 9px;
+    font-size: 41px;
+    color: #003060; }
+  .Section3 .box2 .box2-subtitle {
+    text-align: center;
     color: white; }
 
 .Section3 .box3 {
@@ -9627,9 +9630,12 @@ body {
   background-repeat: no-repeat;
   background-position: bottom right;
   height: 150px; }
-  .Section3 .box3 .box3-text {
-    padding: 10px 81px 2px 16px;
-    font-size: 20px;
+  .Section3 .box3 .box3-title {
+    padding: 5px 85px 2px 9px;
+    font-size: 41px;
+    color: #003060; }
+  .Section3 .box3 .box3-subtitle {
+    text-align: center;
     color: white; }
 
 .Section3 .box4 {
