@@ -9504,8 +9504,8 @@ body {
   padding-left: 176px; }
   .header .navbar-nav .nav-item {
     color: #003060;
-    font-size: 18px;
-    font-weight: 700; }
+    font-size: 17px;
+    font-weight: 600; }
   .header .navbar-nav .nav-element {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -9516,7 +9516,7 @@ body {
     padding: 0px 5px; }
 
 .footer {
-  padding: 50px 0px 50px 30px; }
+  padding: 50px 0px 50px 60px; }
   .footer .footer-text {
     font-size: 20px;
     color: #003060;
@@ -9604,7 +9604,7 @@ body {
     color: white;
     font-size: 20px; }
   .Section3 .box1 .box1-text2 {
-    padding: 10px 31px 2px 74px;
+    padding: 10px 31px 2px 73px;
     font-size: 18px;
     color: #003060; }
 
@@ -9615,6 +9615,10 @@ body {
   background-repeat: no-repeat;
   background-position: bottom right;
   height: 150px; }
+  .Section3 .box2 .box2-text {
+    padding: 10px 81px 2px 16px;
+    font-size: 20px;
+    color: white; }
 
 .Section3 .box3 {
   background-color: #77aede;
@@ -9623,6 +9627,10 @@ body {
   background-repeat: no-repeat;
   background-position: bottom right;
   height: 150px; }
+  .Section3 .box3 .box3-text {
+    padding: 10px 81px 2px 16px;
+    font-size: 20px;
+    color: white; }
 
 .Section3 .box4 {
   background-size: contain;
@@ -9636,12 +9644,13 @@ body {
     color: #003060; }
 
 .Section3 .box5 {
-  padding-top: 40px;
+  padding: 40px 10px;
   margin-right: 200px; }
   .Section3 .box5 .box5-tittle {
     color: #77aede; }
   .Section3 .box5 .box5-text {
-    font-size: 20px; }
+    font-size: 25px;
+    color: #727272; }
 
 .Section-4 {
   padding-top: 70px; }
