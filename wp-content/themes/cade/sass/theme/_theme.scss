@@ -120,6 +120,12 @@ body {
 .Section3 {
   padding: 6.25rem 0rem;
 
+  @media screen and (max-width:768px) {
+    padding: 30px;
+
+
+  }
+
   .Section3-header {
     color: $yellow-color;
   }
@@ -132,6 +138,13 @@ body {
     min-width: 100%;
     min-height: 460px;
 
+    @media screen and (max-width:768px) {
+      background-image: none;
+
+    }
+
+
+
   }
 
   .box1 {
@@ -139,11 +152,21 @@ body {
     background-repeat: no-repeat;
     background-position: right;
 
+    @media screen and (max-width:768px) {
+      padding: 20px 0px 20px 0px;
+
+    }
+
     .box1-text1 {
       padding: 1rem;
       background: $blue-color;
       color: #fff;
       font-size: 1rem;
+
+      @media screen and (max-width:768px) {
+        font-size: 20px;
+
+      }
     }
 
     .box1-text2 {
@@ -159,11 +182,21 @@ body {
 
       h1 {
         font-size: 1rem;
+
+        @media screen and (max-width:768px) {
+          font-size: 20px;
+
+        }
       }
 
       img {
         height: 8rem;
         margin-top: -42px;
+
+        @media screen and (max-width:768px) {
+          height: 11rem;
+
+        }
       }
     }
   }
@@ -201,12 +234,25 @@ body {
 
   .box3 {
     background-color: $light-blue-color;
+
+    @media screen and (max-width:768px) {
+      margin-top: 20px;
+
+    }
+
   }
 
   .box4 {
     border: 4px solid $yellow-color;
     text-align: right;
     height: 100%;
+
+    @media screen and (max-width:768px) {
+      margin-top: 20px;
+
+    }
+
+
 
     .box4-text {
       text-align: left;
@@ -227,6 +273,13 @@ body {
   .box5 {
     padding: 2rem 0;
 
+
+    @media screen and (max-width:768px) {
+      padding-top: 50px;
+      width: 300px;
+
+    }
+
     .box5-tittle {
       color: $light-blue-color;
       font-size: 2.25rem;
@@ -236,6 +289,13 @@ body {
       font-size: 1.25rem;
       font-weight: 700;
       color: $gray-color;
+
+      @media screen and (max-width:768px) {
+        line-height: 26px;
+        font-weight: 400;
+        font-size: 1.20rem;
+
+      }
     }
   }
 }
@@ -255,6 +315,11 @@ body {
     background-size: cover;
     background-position: center;
     max-height: 34.375rem;
+
+    @media screen and (max-width:768px) {
+      height: 300px;
+
+    }
   }
 
   .arrow {
@@ -262,6 +327,11 @@ body {
     border-width: 0 0.125rem 0.125rem 0;
     display: inline-block;
     padding: 1.5rem;
+
+    @media screen and (max-width:768px) {
+      display: none;
+
+    }
   }
 
   .arrow-prev {
@@ -303,14 +373,33 @@ body {
     padding: 75px 200px 75px 50px;
     min-height: 31.25rem;
 
+    @media screen and (max-width:768px) {
+      height: 100px;
+
+    }
+
+    @media screen and (max-width:768px) {
+      background-color: #003060;
+
+    }
+
     .Section4-text1 {
       color: #77aede;
+
+      @media screen and (max-width:768px) {
+        color: white
+      }
     }
 
     .Section4-text2 {
       color: #003060;
       font-size: 3.2rem;
       font-weight: 600;
+
+      @media screen and (max-width:768px) {
+        display: none;
+
+      }
 
     }
 
@@ -320,6 +409,11 @@ body {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: initial;
+
+      @media screen and (max-width:768px) {
+        display: none;
+
+      }
     }
   }
 }
@@ -327,6 +421,8 @@ body {
 // SECTION 5
 .Section5 {
   padding: 3.125rem 0 9.5rem;
+
+
 
   .align-stretch {
     align-items: stretch;
@@ -356,6 +452,11 @@ body {
     height: 100%;
     display: block;
     text-decoration: none;
+
+    @media screen and (max-width:768px) {
+      display: none;
+
+    }
 
     &:hover {
       text-decoration: underline;
@@ -402,6 +503,17 @@ body {
   }
 
 
+}
+
+.Section5-mobile {
+  display: none;
+
+
+  @media screen and (max-width:768px) {
+    display: block;
+
+
+  }
 }
 
 // FOOTER

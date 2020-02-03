@@ -27,7 +27,7 @@ $container = get_theme_mod('understrap_container_type');
 	<section class="Section1">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-sm-10 px-0">
+				<div class="col-lg-10 px-0">
 					<div class="Section1-container">
 						<div class="Section1-img">
 							<img class="w-100" src="<?php echo get_template_directory_uri(); ?>/img/img-section1.jpg" alt="">
@@ -51,7 +51,7 @@ $container = get_theme_mod('understrap_container_type');
 	<section class="Section2">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-12 px-0">
+				<div class="col-lg-12 px-0">
 					<div class="Section2-text">
 						<p>Liderada por el máximo nivel ejecutivo de las compañías con presencia en la cadena energética.</p>
 					</div>
@@ -122,12 +122,12 @@ $container = get_theme_mod('understrap_container_type');
 
 		<div class="img-backgraund container-fluid">
 			<div class="row">
-				<div class="col-sm-7 offset-sm-3">
+				<div class="col-lg-7 offset-sm-3">
 					<div class="Section3-header">
 						<h1>Nosotros</h1>
 					</div>
 					<div class="row">
-						<div class="col-sm-4">
+						<div class="col-lg-4">
 							<div class="box1">
 								<div class="box1-text1">
 									Abarcamos toda la cadena de producción para impulsar el desarrollo del potencial energético del
@@ -139,9 +139,9 @@ $container = get_theme_mod('understrap_container_type');
 								</div>
 							</div>
 						</div>
-						<div class="col-sm-8">
+						<div class="col-lg-8">
 							<div class="row col-same-height">
-								<div class="col-sm-4">
+								<div class="col-lg-4">
 									<div class="box2">
 										<div class="box-title">
 											Lorem ipsum
@@ -152,7 +152,7 @@ $container = get_theme_mod('understrap_container_type');
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-4">
+								<div class="col-lg-4">
 									<div class="box3">
 										<div class="box-title">
 											Lorem ipsum
@@ -163,7 +163,7 @@ $container = get_theme_mod('understrap_container_type');
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-4">
+								<div class="col-lg-4">
 									<div class="box4">
 										<div class="box4-text">
 											Lorem ipsum dolor sit amet, consectetuer adipiscing
@@ -173,7 +173,7 @@ $container = get_theme_mod('understrap_container_type');
 								</div>
 							</div>
 							<div class="row">
-								<div class="col-sm-12">
+								<div class="col-lg-12">
 									<div class="box5">
 										<h1 class="box5-tittle">Impulsamos el desarrollo</h1>
 										<p class="box5-text">Consideramos que el desarrollo de los recursos energéticos permitirá el
@@ -221,10 +221,10 @@ $container = get_theme_mod('understrap_container_type');
 						<?php while ($proyecto_query->have_posts()) : $proyecto_query->the_post(); ?>
 							<div class="carousel-item <?php echo $proyecto_query->current_post >= 1 ? '' : 'active'; ?>">
 								<div class="row col-same-height">
-									<div class="col-sm-6 Section4-image" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
+									<div class="col-lg-6 Section4-image" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
 
 									</div>
-									<div class=" Section4-text col-sm-6">
+									<div class=" Section4-text col-lg-6">
 										<div class="Section4-text1">
 											<h2>Proyectos</h2>
 										</div>
@@ -256,10 +256,10 @@ $container = get_theme_mod('understrap_container_type');
 <section class="Section5" id="noticias">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-sm-10 px-0 offset-sm-2">
+			<div class="col-lg-10 px-0 offset-lg-2">
 				<h2 class="Title">Noticias <span>& Novedades</span></h2>
 				<div class="row align-stretch mr-0">
-					<div class="col-sm-6">
+					<div class="col-lg-6">
 						<div class="row">
 							<?php
 							$args = array(
@@ -277,7 +277,7 @@ $container = get_theme_mod('understrap_container_type');
 							$proyecto_query = new WP_Query($args);
 							?>
 							<?php while ($proyecto_query->have_posts()) : $proyecto_query->the_post(); ?>
-								<div class="col-sm-6 mb-3">
+								<div class="col-lg-6 mb-3">
 									<?php
 									$link = get_field('enlace'); ?>
 
@@ -297,7 +297,7 @@ $container = get_theme_mod('understrap_container_type');
 							<?php wp_reset_postdata(); ?>
 						</div>
 					</div>
-					<div class="col-sm-6 margin-botom-1 pr-0">
+					<div class="col-lg-6 margin-botom-1 pr-0">
 						<?php
 						$args = array(
 							'post_type' => 'noticia',
@@ -327,6 +327,35 @@ $container = get_theme_mod('understrap_container_type');
 							</a>
 						<?php endwhile; ?>
 						<?php wp_reset_postdata(); ?>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="Section5-mobile">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
+						<div>
+							<h3>1</h3>
+						</div>
+						<div>
+							<h3>2</h3>
+						</div>
+						<div>
+							<h3>3</h3>
+						</div>
+						<div>
+							<h3>4</h3>
+						</div>
+						<div>
+							<h3>5</h3>
+						</div>
+						<div>
+							<h3>6</h3>
+						</div>
 					</div>
 				</div>
 			</div>
