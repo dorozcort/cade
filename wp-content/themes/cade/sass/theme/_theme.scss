@@ -30,6 +30,12 @@ body {
   align-items: stretch;
 }
 
+.hide-mobile {
+  @include media-breakpoint-down(md) {
+    display: none
+  }
+}
+
 // HEADER MENU
 
 .header-menu {
@@ -422,8 +428,6 @@ body {
 .Section5 {
   padding: 3.125rem 0 9.5rem;
 
-
-
   .align-stretch {
     align-items: stretch;
   }
@@ -452,11 +456,6 @@ body {
     height: 100%;
     display: block;
     text-decoration: none;
-
-    @media screen and (max-width:768px) {
-      display: none;
-
-    }
 
     &:hover {
       text-decoration: underline;
@@ -499,22 +498,24 @@ body {
     .destacada-text {
       padding: 25px 140px 0px 25px;
       font-weight: 400;
+
+      @include media-breakpoint-down(md) {
+        height: 100vh;
+      }
+    }
+  }
+
+  .news-container-mobile {
+
+    .slick-slide {
+      margin: 0 1.25rem;
     }
   }
 
 
+
 }
 
-.Section5-mobile {
-  display: none;
-
-
-  @media screen and (max-width:768px) {
-    display: block;
-
-
-  }
-}
 
 // FOOTER
 
