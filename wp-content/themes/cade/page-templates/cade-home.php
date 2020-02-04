@@ -30,7 +30,7 @@ $container = get_theme_mod('understrap_container_type');
 				<div class="col-lg-10 px-0">
 					<div class="Section1-container">
 						<div class="Section1-img">
-							<img class="w-100" src="<?php echo get_template_directory_uri(); ?>/img/img-section1.jpg" alt="">
+							<img class="section-img" src="<?php echo get_template_directory_uri(); ?>/img/img-section1.jpg" alt="">
 						</div>
 						<div class="Section1-text">
 							<p>Representamos a empresas líderes del sector energético dedicadas al estudio y la posibilidad de
@@ -141,7 +141,7 @@ $container = get_theme_mod('understrap_container_type');
 						</div>
 						<div class="col-lg-8">
 							<div class="row col-same-height">
-								<div class="col-lg-4">
+								<div class="col-lg-4 col-4">
 									<div class="box2">
 										<div class="box-title">
 											Lorem ipsum
@@ -152,7 +152,7 @@ $container = get_theme_mod('understrap_container_type');
 										</div>
 									</div>
 								</div>
-								<div class="col-lg-4">
+								<div class="col-lg-4 col-4">
 									<div class="box3">
 										<div class="box-title">
 											Lorem ipsum
@@ -192,8 +192,14 @@ $container = get_theme_mod('understrap_container_type');
 	<!-- Section 4 -->
 
 	<section class="Section4" id="proyectos">
-
-		<?php
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="Section4-header">
+						<h1>Proyectos</h1>
+					</div>
+				</div>
+				<?php
 		$args = array(
 			'post_type' => 'proyecto',
 			'showposts' => 10
@@ -249,7 +255,10 @@ $container = get_theme_mod('understrap_container_type');
 			<span class="sr-only">Next</span>
 		</a>
 </div>
-</section>
+			</div>
+		</div>
+		
+	</section>
 
 <!-- Section 5 -->
 
@@ -258,6 +267,7 @@ $container = get_theme_mod('understrap_container_type');
 		<div class="row">
 			<div class="col-lg-10 px-0 offset-lg-2">
 				<h2 class="Title">Noticias <span>& Novedades</span></h2>
+				</div>
 				<div class="row align-stretch mr-0">
 					<div class="col-lg-6">
 						<div class="row">
@@ -332,34 +342,6 @@ $container = get_theme_mod('understrap_container_type');
 			</div>
 		</div>
 
-	</div>
-	<div class="Section5-mobile">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12">
-					<div data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
-						<div>
-							<h3>1</h3>
-						</div>
-						<div>
-							<h3>2</h3>
-						</div>
-						<div>
-							<h3>3</h3>
-						</div>
-						<div>
-							<h3>4</h3>
-						</div>
-						<div>
-							<h3>5</h3>
-						</div>
-						<div>
-							<h3>6</h3>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 	</div>
 </section>
 

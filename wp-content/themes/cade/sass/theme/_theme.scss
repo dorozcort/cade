@@ -17,6 +17,10 @@ $light-gray-color: #8d9fab;
 #page {
   background: url(/cade/wp-content/themes/cade/img/img-background-cade.jpg) no-repeat;
   background-size: 100% 100%;
+
+  @media screen and (max-width:768px) {
+    background: none;
+  }
 }
 
 *,
@@ -34,12 +38,38 @@ body {
 
 .header-menu {
 
+  .img-fluid {
+    @media screen and (max-width:768px) {
+      width: 150px;
+      margin-bottom: 30px;
+    }
+  }
+
   .nav-link {
     color: $blue-color;
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.2rem;
+
+    @media screen and (max-width:768px) {
+      font-size: 0.8rem;
+      font-weight: 600;
+
+    }
+
+  }
+
+  .navbar-toggler {
+    @media screen and (max-width:768px) {
+      background-color: #003060;
+
+    }
+
+    .navbar-toggler-icon {
+      @media screen and (max-width:768px) {}
+
+    }
   }
 
   .menu-item {
@@ -49,6 +79,12 @@ body {
     &:after {
       content: "|";
       padding: .5rem;
+
+      @media screen and(max-width:768px) {
+        display: none;
+
+
+      }
     }
   }
 
@@ -80,6 +116,36 @@ body {
     padding: 30px;
     margin-right: -50px;
     transform: translateY(-50%);
+
+    @media screen and (max-width:768px) {
+      left: 100px;
+      top: 10%;
+      width: 300px;
+      font-size: 14px;
+      font-weight: 500;
+      height: 265px;
+      padding-right: 50px;
+
+
+
+    }
+
+
+  }
+
+  .Section1-img {
+    max-width: 100%;
+
+    .section-img {
+      @media screen and (max-width:768px) {
+        height: 100vh;
+        width: auto;
+        transform: translateX(-47%);
+        max-width: initial;
+      }
+
+
+    }
   }
 
 }
@@ -94,26 +160,43 @@ body {
   .Section2-text {
     padding: 25px;
     text-align: center;
+
+    @media screen and (max-width :768px) {}
+
   }
 
   .Section2-carousel {
     display: flex;
 
+    @media screen and (max-width :768px) {
+      flex-flow: wrap;
+      justify-content: space-around;
 
-    .container-carousel {
-      padding: 10px 20px;
-      display: flex;
-      align-content: center;
-      align-items: center;
     }
 
-    .img-carousel {
-      width: 100%;
-      filter: grayscale(1);
+  }
+
+
+  .container-carousel {
+    padding: 10px 20px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+
+    @media screen and(max-width:768px) {
+      padding: 9px 13px;
+
     }
   }
 
+  .img-carousel {
+    max-width: 55px;
+    filter: grayscale(1);
+
+
+  }
 }
+
 
 // SECTION 3
 
@@ -203,6 +286,11 @@ body {
 
   .box2 {
     background-color: $light-gray-color;
+
+    @media screen and (max-width:768px) {
+      height: fit-content;
+      width: 133px;
+    }
   }
 
   .box-title {
@@ -225,6 +313,11 @@ body {
       font-weight: 700;
       margin: 0;
       line-height: 1;
+
+      @media screen and (max-width:768px) {
+        font-size: 3rem;
+      }
+
     }
 
     img {
@@ -236,7 +329,9 @@ body {
     background-color: $light-blue-color;
 
     @media screen and (max-width:768px) {
-      margin-top: 20px;
+      height: fit-content;
+      margin-left: 47px;
+      width: 133px;
 
     }
 
@@ -293,7 +388,7 @@ body {
       @media screen and (max-width:768px) {
         line-height: 26px;
         font-weight: 400;
-        font-size: 1.20rem;
+        font-size: 1rem;
 
       }
     }
@@ -306,117 +401,152 @@ body {
 
   padding: 3.125rem 0;
 
-  .carousel {
-    box-shadow: 0 10px 10px -5px #bebebe;
-  }
-
-  .Section4-image {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    max-height: 34.375rem;
+  .Section4-header {
+    display: none;
 
     @media screen and (max-width:768px) {
-      height: 300px;
+      display: block;
+      color: #ffd500;
+      padding-bottom: 20px;
 
     }
+
+
   }
 
-  .arrow {
-    border: solid #77aede;
-    border-width: 0 0.125rem 0.125rem 0;
-    display: inline-block;
-    padding: 1.5rem;
+
+}
+
+.Section4-header {
+  display: none;
+
+
+}
+
+
+.carousel {
+  box-shadow: 0 10px 10px -5px #bebebe;
+}
+
+.Section4-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  max-height: 34.375rem;
+
+  @media screen and (max-width:768px) {
+    height: 400px;
+
+  }
+}
+
+.arrow {
+  border: solid #77aede;
+  border-width: 0 0.125rem 0.125rem 0;
+  display: inline-block;
+  padding: 1.5rem;
+
+  @media screen and (max-width:768px) {
+    display: none;
+
+  }
+}
+
+.arrow-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(135deg);
+}
+
+.arrow-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.carousel-indicators {
+  @media screen and (max-width:768px) {
+    right: 33%;
+
+  }
+}
+
+.carousel-indicators li {
+  box-sizing: content-box;
+  flex: 0 1 auto;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+  text-indent: -999px;
+
+  @media screen and (max-width:768px) {
+    right: 33%;
+
+
+  }
+
+  cursor: pointer;
+  background-color: #77aede;
+  background-clip: padding-box;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  opacity: 1;
+  transition: opacity .6s ease;
+  border-radius: 35%;
+
+  &.active {
+    background-color: #ffd500;
+  }
+}
+
+
+.Section4-text {
+  padding: 75px 200px 75px 50px;
+  min-height: 31.25rem;
+
+  @media screen and (max-width:768px) {
+    height: 100px;
+
+  }
+
+  @media screen and (max-width:768px) {
+    background-color: #003060;
+
+  }
+
+  .Section4-text1 {
+    color: #77aede;
 
     @media screen and (max-width:768px) {
       display: none;
-
     }
   }
 
-  .arrow-prev {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%) rotate(135deg);
-  }
-
-  .arrow-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%) rotate(-45deg);
-  }
-
-  .carousel-indicators li {
-    box-sizing: content-box;
-    flex: 0 1 auto;
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    margin-left: 10px;
-    text-indent: -999px;
-    cursor: pointer;
-    background-color: #77aede;
-    background-clip: padding-box;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    opacity: 1;
-    transition: opacity .6s ease;
-    border-radius: 35%;
-
-    &.active {
-      background-color: #ffd500;
-    }
-  }
-
-
-  .Section4-text {
-    padding: 75px 200px 75px 50px;
-    min-height: 31.25rem;
+  .Section4-text2 {
+    color: #003060;
+    font-size: 3.2rem;
+    font-weight: 600;
 
     @media screen and (max-width:768px) {
-      height: 100px;
-
+      color: white;
     }
+  }
+
+  .Section4-text3 {
+    color: #727272;
+    max-height: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: initial;
 
     @media screen and (max-width:768px) {
-      background-color: #003060;
-
-    }
-
-    .Section4-text1 {
-      color: #77aede;
-
-      @media screen and (max-width:768px) {
-        color: white
-      }
-    }
-
-    .Section4-text2 {
-      color: #003060;
-      font-size: 3.2rem;
-      font-weight: 600;
-
-      @media screen and (max-width:768px) {
-        display: none;
-
-      }
-
-    }
-
-    .Section4-text3 {
-      color: #727272;
-      max-height: 200px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: initial;
-
-      @media screen and (max-width:768px) {
-        display: none;
-
-      }
+      width: 323px;
+      color: white;
     }
   }
 }
+
 
 // SECTION 5
 .Section5 {
@@ -434,95 +564,105 @@ body {
     display: flex;
     margin-bottom: 1.25rem;
 
-    span {
-      margin-left: 3rem;
-      color: $yellow-color;
-      font-size: 1.75rem;
-    }
-
-  }
-
-  .news-container {
-    background: #003060;
-    background-size: cover;
-    padding: 20px;
-    min-height: 280px;
-    margin-bottom: 5px;
-    border-bottom: 10px solid #77aede;
-    height: 100%;
-    display: block;
-    text-decoration: none;
-
     @media screen and (max-width:768px) {
-      display: none;
-
+      margin-left: 27px;
     }
 
-    &:hover {
-      text-decoration: underline;
-      color: #fff;
-    }
-
-    .news-text0 {
-      color: $yellow-color;
-      font-size: 1.25rem;
-    }
-
-    .news-text1 {
-      color: $yellow-color;
-    }
-
-    .news-text2 {
-      color: white;
-      font-size: 18px;
-    }
-
-    .news-text3 {
-      color: $yellow-color;
-      font-size: 18px;
-
-    }
   }
 
-  .margin-botom-1 {
-    margin-bottom: 1rem;
+  span {
+    margin-left: 3rem;
+    color: $yellow-color;
+    font-size: 1.75rem;
   }
 
-  .destacada-container {
-    background-repeat: no-repeat;
-    height: 100%;
-    background-size: cover;
+}
+
+.news-container {
+  background: #003060;
+  background-size: cover;
+  padding: 20px;
+  min-height: 280px;
+  margin-bottom: 5px;
+  border-bottom: 10px solid #77aede;
+  height: 100%;
+  display: block;
+  text-decoration: none;
+
+  @media screen and (max-width:768px) {}
+
+  &:hover {
+    text-decoration: underline;
+    color: #fff;
+  }
+
+  .news-text0 {
+    color: $yellow-color;
+    font-size: 1.25rem;
+  }
+
+  .news-text1 {
+    color: $yellow-color;
+  }
+
+  .news-text2 {
     color: white;
-    font-size: 25px;
-    display: block;
-
-    .destacada-text {
-      padding: 25px 140px 0px 25px;
-      font-weight: 400;
-    }
+    font-size: 18px;
   }
 
-
-}
-
-.Section5-mobile {
-  display: none;
-
-
-  @media screen and (max-width:768px) {
-    display: block;
-
+  .news-text3 {
+    color: $yellow-color;
+    font-size: 18px;
 
   }
 }
+
+.margin-botom-1 {
+  margin-bottom: 1rem;
+}
+
+.destacada-container {
+  background-repeat: no-repeat;
+  height: 100%;
+  background-size: cover;
+  color: white;
+  font-size: 25px;
+  display: block;
+
+  .destacada-text {
+    padding: 25px 140px 0px 25px;
+    font-weight: 400;
+  }
+}
+
+
+
 
 // FOOTER
 
-.site-info {
-  font-size: 1.5rem;
-  text-align: center;
+.site-footer {
 
-  a {
-    color: $blue-color
+  @media screen and (max-width:768px) {
+    margin-left: 75px;
+    width: 203px;
+    background-image: url(/wp-content/themes/cade/img/img-backgroundfooter-cade.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+  }
+
+  .site-info {
+    font-size: 1.5rem;
+    text-align: center;
+
+    @media screen and (max-width:768px) {
+      font-size: 1rem;
+
+    }
+
+    a {
+      color: $blue-color
+    }
   }
 }
