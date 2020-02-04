@@ -34,6 +34,12 @@ body {
   align-items: stretch;
 }
 
+.hide-mobile {
+  @include media-breakpoint-down(md) {
+    display: none
+  }
+}
+
 // HEADER MENU
 
 .header-menu {
@@ -552,8 +558,6 @@ body {
 .Section5 {
   padding: 3.125rem 0 9.5rem;
 
-
-
   .align-stretch {
     align-items: stretch;
   }
@@ -566,98 +570,143 @@ body {
 
     @media screen and (max-width:768px) {
       margin-left: 27px;
+
+      span {
+        margin-left: 3rem;
+        color: $yellow-color;
+        font-size: 1.75rem;
+      }
+
+    }
+
+    .news-container {
+      background: #003060;
+      background-size: cover;
+      padding: 20px;
+      min-height: 280px;
+      margin-bottom: 5px;
+      border-bottom: 10px solid #77aede;
+      height: 100%;
+      display: block;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+        color: #fff;
+      }
+
+    }
+
+    span {
+      margin-left: 3rem;
+      color: $yellow-color;
+      font-size: 1.75rem;
     }
 
   }
 
-  span {
-    margin-left: 3rem;
-    color: $yellow-color;
-    font-size: 1.75rem;
-  }
-
-}
-
-.news-container {
-  background: #003060;
-  background-size: cover;
-  padding: 20px;
-  min-height: 280px;
-  margin-bottom: 5px;
-  border-bottom: 10px solid #77aede;
-  height: 100%;
-  display: block;
-  text-decoration: none;
-
-  @media screen and (max-width:768px) {}
-
-  &:hover {
-    text-decoration: underline;
-    color: #fff;
-  }
-
-  .news-text0 {
-    color: $yellow-color;
-    font-size: 1.25rem;
-  }
-
-  .news-text1 {
-    color: $yellow-color;
-  }
-
-  .news-text2 {
-    color: white;
-    font-size: 18px;
-  }
-
-  .news-text3 {
-    color: $yellow-color;
-    font-size: 18px;
-
-  }
-}
-
-.margin-botom-1 {
-  margin-bottom: 1rem;
-}
-
-.destacada-container {
-  background-repeat: no-repeat;
-  height: 100%;
-  background-size: cover;
-  color: white;
-  font-size: 25px;
-  display: block;
-
-  .destacada-text {
-    padding: 25px 140px 0px 25px;
-    font-weight: 400;
-  }
-}
-
-
-
-
-// FOOTER
-
-.site-footer {
-
-  @media screen and (max-width:768px) {
-    margin-left: 75px;
-    width: 203px;
-    background-image: url(/wp-content/themes/cade/img/img-backgroundfooter-cade.jpg);
-    background-repeat: no-repeat;
+  .news-container {
+    background: #003060;
     background-size: cover;
+    padding: 20px;
+    min-height: 280px;
+    margin-bottom: 5px;
+    border-bottom: 10px solid #77aede;
+    height: 100%;
+    display: block;
+    text-decoration: none;
 
+    @media screen and (max-width:768px) {}
 
+    &:hover {
+      text-decoration: underline;
+      color: #fff;
+    }
+
+    .news-text0 {
+      color: $yellow-color;
+      font-size: 1.25rem;
+    }
+
+    .news-text1 {
+      color: $yellow-color;
+    }
+
+    .news-text2 {
+      color: white;
+      font-size: 18px;
+    }
+
+    .news-text3 {
+      color: $yellow-color;
+      font-size: 18px;
+
+      .destacada-text {
+        padding: 25px 140px 0px 25px;
+        font-weight: 400;
+
+        @include media-breakpoint-down(md) {
+          height: 100vh;
+        }
+      }
+    }
   }
 
-  .site-info {
-    font-size: 1.5rem;
-    text-align: center;
+  .margin-botom-1 {
+    margin-bottom: 1rem;
+  }
+
+  .destacada-container {
+    background-repeat: no-repeat;
+    height: 100%;
+    background-size: cover;
+    color: white;
+    font-size: 25px;
+    display: block;
+
+    .destacada-text {
+      padding: 25px 140px 0px 25px;
+      font-weight: 400;
+    }
+  }
+
+
+
+
+  // FOOTER
+
+  .site-footer {
 
     @media screen and (max-width:768px) {
-      font-size: 1rem;
+      margin-left: 75px;
+      width: 203px;
+      background-image: url(/wp-content/themes/cade/img/img-backgroundfooter-cade.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+
+
+    }
+
+    .site-info {
+      font-size: 1.5rem;
+      text-align: center;
+
+      @media screen and (max-width:768px) {
+        font-size: 1rem;
+
+        .news-container-mobile {
+
+          .slick-slide {
+            margin: 0 1.25rem;
+          }
+        }
+
+
+
+      }
+
+
+      // FOOTER
 
     }
 

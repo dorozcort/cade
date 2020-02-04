@@ -263,13 +263,13 @@ $container = get_theme_mod('understrap_container_type');
 <!-- Section 5 -->
 
 <section class="Section5" id="noticias">
-	<div class="container-fluid">
+	<div class="container-fluid noticias-desktop">
 		<div class="row">
 			<div class="col-lg-10 px-0 offset-lg-2">
 				<h2 class="Title">Noticias <span>& Novedades</span></h2>
 				</div>
 				<div class="row align-stretch mr-0">
-					<div class="col-lg-6">
+					<div class="col-lg-6 hide-mobile">
 						<div class="row">
 							<?php
 							$args = array(
@@ -341,6 +341,46 @@ $container = get_theme_mod('understrap_container_type');
 				</div>
 			</div>
 		</div>
+
+	</div>
+	<div class="Section5-mobile d-lg-none">
+		<div class="news-container-mobile">
+			<?php
+			$args = array(
+				'post_type' => 'noticia',
+				'showposts' => 4,
+				'order' => 'ASC',
+				'meta_query' => array(
+					array(
+						'key'   => 'destacada',
+						'value' => '0',
+					)
+				)
+			);
+
+			$proyecto_query = new WP_Query($args);
+			?>
+			<?php while ($proyecto_query->have_posts()) : $proyecto_query->the_post(); ?>
+				<div class="">
+					<?php
+					$link = get_field('enlace'); ?>
+
+					<a href="<?php echo esc_url($link); ?>" class="news-container" target="_blank">
+						<div class="news-text0">
+							<span><?php the_field('pretitulo'); ?></span>
+						</div>
+						<div class="news-text1">
+							<h4><?php the_title(); ?></h4>
+						</div>
+						<div class="news-text2">
+							<p><?php the_content(); ?></p>
+						</div>
+					</a>
+				</div>
+			<?php endwhile; ?>
+			<?php wp_reset_postdata(); ?>
+		</div>
+
 
 	</div>
 </section>
