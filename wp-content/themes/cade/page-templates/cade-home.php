@@ -27,10 +27,10 @@ $container = get_theme_mod('understrap_container_type');
 	<section class="Section1">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-lg-10 px-0">
+				<div class="col-xs-12 col-sm-12 col-lg-10 px-0">
 					<div class="Section1-container">
 						<div class="Section1-img">
-							<img class="section-img" src="<?php echo get_template_directory_uri(); ?>/img/img-section1.jpg" alt="">
+							<img class="section-img w-100" src="<?php echo get_template_directory_uri(); ?>/img/img-section1.jpg" alt="">
 						</div>
 						<div class="Section1-text">
 							<p>Representamos a empresas líderes del sector energético dedicadas al estudio y la posibilidad de
@@ -122,7 +122,7 @@ $container = get_theme_mod('understrap_container_type');
 
 		<div class="img-backgraund container-fluid">
 			<div class="row">
-				<div class="col-lg-7 offset-sm-3">
+				<div class="col-lg-7 offset-lg-3">
 					<div class="Section3-header">
 						<h1>Nosotros</h1>
 					</div>
@@ -141,7 +141,7 @@ $container = get_theme_mod('understrap_container_type');
 						</div>
 						<div class="col-lg-8">
 							<div class="row col-same-height">
-								<div class="col-lg-4 col-4">
+								<div class="col-lg-4 col-xs-6 col-sm-6">
 									<div class="box2">
 										<div class="box-title">
 											Lorem ipsum
@@ -152,7 +152,7 @@ $container = get_theme_mod('understrap_container_type');
 										</div>
 									</div>
 								</div>
-								<div class="col-lg-4 col-4">
+								<div class="col-lg-4 col-xs-6 col-sm-6">
 									<div class="box3">
 										<div class="box-title">
 											Lorem ipsum
@@ -199,23 +199,8 @@ $container = get_theme_mod('understrap_container_type');
 						<h1>Proyectos</h1>
 					</div>
 				</div>
-				<?php
-		$args = array(
-			'post_type' => 'proyecto',
-			'showposts' => 10
-		);
-
-		$proyecto_query = new WP_Query($args);
-		?>
-
-		<div id="Proyectos-carousel" class="carousel slide" data-ride="carousel">
-			<ol class="carousel-indicators">
-				<?php while ($proyecto_query->have_posts()) : $proyecto_query->the_post(); ?>
-					<li data-target="#Proyectos-carousel" data-slide-to="<?php echo $proyecto_query->current_post ?>" class="<?php echo $proyecto_query->current_post >= 1 ? '' : 'active'; ?>""></li>
-			<?php endwhile; ?>
-			<?php wp_reset_postdata(); ?>
-			</ol>
-			<div class=" carousel-inner">
+				<div class="container-fluid">
+					<div class="row">
 						<?php
 						$args = array(
 							'post_type' => 'proyecto',
@@ -224,41 +209,60 @@ $container = get_theme_mod('understrap_container_type');
 
 						$proyecto_query = new WP_Query($args);
 						?>
-						<?php while ($proyecto_query->have_posts()) : $proyecto_query->the_post(); ?>
-							<div class="carousel-item <?php echo $proyecto_query->current_post >= 1 ? '' : 'active'; ?>">
-								<div class="row col-same-height">
-									<div class="col-lg-6 Section4-image" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
 
-									</div>
-									<div class=" Section4-text col-lg-6">
-										<div class="Section4-text1">
-											<h2>Proyectos</h2>
-										</div>
-										<div class="Section4-text2">
-											<h1><?php the_title(); ?></h1>
-										</div>
-										<div class="Section4-text3">
-											<p><?php the_content(); ?></p>
-										</div>
-									</div>
-								</div>
-							</div>
-						<?php endwhile; ?>
-						<?php wp_reset_postdata(); ?>
-		</div>
-		<a class="carousel-control-prev " href="#Proyectos-carousel" role="button" data-slide="prev">
-			<span class="arrow arrow-prev" aria-hidden="true"></span>
-			<span class="sr-only">Previous</span>
-		</a>
-		<a class="carousel-control-next " href="#Proyectos-carousel" role="button" data-slide="next">
-			<span class="arrow arrow-next" aria-hidden="true"></span>
-			<span class="sr-only">Next</span>
-		</a>
-</div>
+						<div id="Proyectos-carousel" class="carousel slide" data-ride="carousel">
+							<ol class="carousel-indicators">
+								<?php while ($proyecto_query->have_posts()) : $proyecto_query->the_post(); ?>
+									<li data-target="#Proyectos-carousel" data-slide-to="<?php echo $proyecto_query->current_post ?>" class="<?php echo $proyecto_query->current_post >= 1 ? '' : 'active'; ?>""></li>
+			<?php endwhile; ?>
+			<?php wp_reset_postdata(); ?>
+			</ol>
+			<div class=" carousel-inner">
+										<?php
+										$args = array(
+											'post_type' => 'proyecto',
+											'showposts' => 10
+										);
+
+										$proyecto_query = new WP_Query($args);
+										?>
+										<?php while ($proyecto_query->have_posts()) : $proyecto_query->the_post(); ?>
+											<div class="carousel-item <?php echo $proyecto_query->current_post >= 1 ? '' : 'active'; ?>">
+												<div class="row col-same-height">
+													<div class="col-lg-6 Section4-image" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
+
+													</div>
+													<div class=" Section4-text col-lg-6">
+														<div class="Section4-text1">
+															<h2>Proyectos</h2>
+														</div>
+														<div class="Section4-text2">
+															<h1><?php the_title(); ?></h1>
+														</div>
+														<div class="Section4-text3">
+															<p><?php the_content(); ?></p>
+														</div>
+													</div>
+												</div>
+											</div>
+										<?php endwhile; ?>
+										<?php wp_reset_postdata(); ?>
+						</div>
+						<a class="carousel-control-prev " href="#Proyectos-carousel" role="button" data-slide="prev">
+							<span class="arrow arrow-prev" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="carousel-control-next " href="#Proyectos-carousel" role="button" data-slide="next">
+							<span class="arrow arrow-next" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
-		
-	</section>
+</div>
+
+</section>
 
 <!-- Section 5 -->
 
@@ -267,7 +271,6 @@ $container = get_theme_mod('understrap_container_type');
 		<div class="row">
 			<div class="col-lg-10 px-0 offset-lg-2">
 				<h2 class="Title">Noticias <span>& Novedades</span></h2>
-				</div>
 				<div class="row align-stretch mr-0">
 					<div class="col-lg-6 hide-mobile">
 						<div class="row">
@@ -331,7 +334,7 @@ $container = get_theme_mod('understrap_container_type');
 							<a href="<?php echo esc_url($link); ?>" target="_blank" class="destacada-container" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
 								<div class="destacada-text">
 									<h2><?php the_title(); ?></h2>
-									<p><?php the_content(); ?></p>
+									<div class="hide-mobile"><?php the_content(); ?></div>
 								</div>
 
 							</a>
@@ -341,8 +344,8 @@ $container = get_theme_mod('understrap_container_type');
 				</div>
 			</div>
 		</div>
-
 	</div>
+
 	<div class="Section5-mobile d-lg-none">
 		<div class="news-container-mobile">
 			<?php
@@ -382,6 +385,23 @@ $container = get_theme_mod('understrap_container_type');
 		</div>
 
 
+	</div>
+</section>
+
+<section class="Footer" id="contacto">
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="site-footer">
+					<div class="site-info">
+
+						Contacto: <a href="mailto:info@cadenergia.org">info@cadenergia.org</a> | <a href="tel:+5491148728374">+5411 4872-8374</a>
+
+					</div><!-- .site-info -->
+				</div>
+			</div>
+		</div>
 	</div>
 </section>
 

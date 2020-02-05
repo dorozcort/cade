@@ -18,8 +18,8 @@ $light-gray-color: #8d9fab;
   background: url(/cade/wp-content/themes/cade/img/img-background-cade.jpg) no-repeat;
   background-size: 100% 100%;
 
-  @media screen and (max-width:768px) {
-    background: none;
+  @include media-breakpoint-down(md) {
+    background-image: none;
   }
 }
 
@@ -44,8 +44,14 @@ body {
 
 .header-menu {
 
+  .social-networks-container {
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
   .img-fluid {
-    @media screen and (max-width:768px) {
+    @include media-breakpoint-down(md) {
       width: 150px;
       margin-bottom: 30px;
     }
@@ -58,24 +64,11 @@ body {
     font-weight: 700;
     font-size: 1.2rem;
 
-    @media screen and (max-width:768px) {
-      font-size: 0.8rem;
-      font-weight: 600;
+    @include media-breakpoint-down(md) {
+      font-size: 1rem;
 
     }
 
-  }
-
-  .navbar-toggler {
-    @media screen and (max-width:768px) {
-      background-color: #003060;
-
-    }
-
-    .navbar-toggler-icon {
-      @media screen and (max-width:768px) {}
-
-    }
   }
 
   .menu-item {
@@ -86,7 +79,7 @@ body {
       content: "|";
       padding: .5rem;
 
-      @media screen and(max-width:768px) {
+      @include media-breakpoint-down(md) {
         display: none;
 
 
@@ -103,11 +96,28 @@ body {
       }
     }
   }
+
+  .hamburger {
+    div {
+      width: 35px;
+      height: 2px;
+      background-color: $blue-color;
+      margin: 6px 0;
+    }
+  }
 }
 
 // SECTION 1
 
 .Section1 {
+
+  margin-top: 50px;
+
+  @include media-breakpoint-down(md) {
+    margin-top: 120px;
+    position: relative;
+  }
+
   .Section1-container {
     position: relative;
   }
@@ -123,17 +133,12 @@ body {
     margin-right: -50px;
     transform: translateY(-50%);
 
-    @media screen and (max-width:768px) {
-      left: 100px;
-      top: 10%;
-      width: 300px;
-      font-size: 14px;
-      font-weight: 500;
-      height: 265px;
-      padding-right: 50px;
-
-
-
+    @include media-breakpoint-down(md) {
+      right: 0;
+      top: 20px;
+      width: 75%;
+      font-size: 1.35rem;
+      margin-right: 0px;
     }
 
 
@@ -143,10 +148,10 @@ body {
     max-width: 100%;
 
     .section-img {
-      @media screen and (max-width:768px) {
+      @include media-breakpoint-down(md) {
         height: 100vh;
         width: auto;
-        transform: translateX(-47%);
+
         max-width: initial;
       }
 
@@ -166,16 +171,13 @@ body {
   .Section2-text {
     padding: 25px;
     text-align: center;
-
-    @media screen and (max-width :768px) {}
-
   }
 
   .Section2-carousel {
     display: flex;
+    flex-wrap: wrap;
 
-    @media screen and (max-width :768px) {
-      flex-flow: wrap;
+    @include media-breakpoint-down(md) {
       justify-content: space-around;
 
     }
@@ -189,7 +191,7 @@ body {
     align-content: center;
     align-items: center;
 
-    @media screen and(max-width:768px) {
+    @include media-breakpoint-down(md) {
       padding: 9px 13px;
 
     }
@@ -209,7 +211,7 @@ body {
 .Section3 {
   padding: 6.25rem 0rem;
 
-  @media screen and (max-width:768px) {
+  @include media-breakpoint-down(md) {
     padding: 30px;
 
 
@@ -227,7 +229,7 @@ body {
     min-width: 100%;
     min-height: 460px;
 
-    @media screen and (max-width:768px) {
+    @include media-breakpoint-down(md) {
       background-image: none;
 
     }
@@ -241,7 +243,7 @@ body {
     background-repeat: no-repeat;
     background-position: right;
 
-    @media screen and (max-width:768px) {
+    @include media-breakpoint-down(md) {
       padding: 20px 0px 20px 0px;
 
     }
@@ -252,7 +254,7 @@ body {
       color: #fff;
       font-size: 1rem;
 
-      @media screen and (max-width:768px) {
+      @include media-breakpoint-down(md) {
         font-size: 20px;
 
       }
@@ -272,7 +274,7 @@ body {
       h1 {
         font-size: 1rem;
 
-        @media screen and (max-width:768px) {
+        @include media-breakpoint-down(md) {
           font-size: 20px;
 
         }
@@ -282,9 +284,9 @@ body {
         height: 8rem;
         margin-top: -42px;
 
-        @media screen and (max-width:768px) {
+        @include media-breakpoint-down(md) {
           height: 11rem;
-
+          margin-top: 0;
         }
       }
     }
@@ -293,9 +295,8 @@ body {
   .box2 {
     background-color: $light-gray-color;
 
-    @media screen and (max-width:768px) {
+    @include media-breakpoint-down(md) {
       height: fit-content;
-      width: 133px;
     }
   }
 
@@ -313,6 +314,7 @@ body {
     justify-content: space-around;
     align-items: center;
     padding: 0 1rem .75rem;
+    flex-wrap: wrap;
 
     h1 {
       font-size: 5rem;
@@ -320,7 +322,7 @@ body {
       margin: 0;
       line-height: 1;
 
-      @media screen and (max-width:768px) {
+      @include media-breakpoint-down(md) {
         font-size: 3rem;
       }
 
@@ -334,12 +336,7 @@ body {
   .box3 {
     background-color: $light-blue-color;
 
-    @media screen and (max-width:768px) {
-      height: fit-content;
-      margin-left: 47px;
-      width: 133px;
-
-    }
+    @include media-breakpoint-down(md) {}
 
   }
 
@@ -348,8 +345,9 @@ body {
     text-align: right;
     height: 100%;
 
-    @media screen and (max-width:768px) {
+    @include media-breakpoint-down(md) {
       margin-top: 20px;
+
 
     }
 
@@ -367,7 +365,13 @@ body {
       position: relative;
       height: 65px;
       right: 5px;
-      margin-top: -15px;
+
+      @include media-breakpoint-down(md) {
+
+        margin-top: 0;
+        bottom: 0;
+        margin: auto;
+      }
     }
   }
 
@@ -375,9 +379,8 @@ body {
     padding: 2rem 0;
 
 
-    @media screen and (max-width:768px) {
+    @include media-breakpoint-down(md) {
       padding-top: 50px;
-      width: 300px;
 
     }
 
@@ -391,7 +394,7 @@ body {
       font-weight: 700;
       color: $gray-color;
 
-      @media screen and (max-width:768px) {
+      @include media-breakpoint-down(md) {
         line-height: 26px;
         font-weight: 400;
         font-size: 1rem;
@@ -410,149 +413,137 @@ body {
   .Section4-header {
     display: none;
 
-    @media screen and (max-width:768px) {
+    @include media-breakpoint-down(md) {
       display: block;
       color: #ffd500;
       padding-bottom: 20px;
+      font-size: 2rem;
 
     }
 
-
   }
 
 
-}
+  .carousel {
+    box-shadow: 0 10px 10px -5px #bebebe;
 
-.Section4-header {
-  display: none;
-
-
-}
-
-
-.carousel {
-  box-shadow: 0 10px 10px -5px #bebebe;
-}
-
-.Section4-image {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  max-height: 34.375rem;
-
-  @media screen and (max-width:768px) {
-    height: 400px;
-
-  }
-}
-
-.arrow {
-  border: solid #77aede;
-  border-width: 0 0.125rem 0.125rem 0;
-  display: inline-block;
-  padding: 1.5rem;
-
-  @media screen and (max-width:768px) {
-    display: none;
-
-  }
-}
-
-.arrow-prev {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%) rotate(135deg);
-}
-
-.arrow-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%) rotate(-45deg);
-}
-
-.carousel-indicators {
-  @media screen and (max-width:768px) {
-    right: 33%;
-
-  }
-}
-
-.carousel-indicators li {
-  box-sizing: content-box;
-  flex: 0 1 auto;
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  margin-left: 10px;
-  text-indent: -999px;
-
-  @media screen and (max-width:768px) {
-    right: 33%;
-
-
+    @include media-breakpoint-down(md) {
+      box-shadow: none;
+      width: 100%;
+    }
   }
 
-  cursor: pointer;
-  background-color: #77aede;
-  background-clip: padding-box;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  opacity: 1;
-  transition: opacity .6s ease;
-  border-radius: 35%;
+  .Section4-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-height: 34.375rem;
 
-  &.active {
-    background-color: #ffd500;
-  }
-}
+    @include media-breakpoint-down(md) {
+      height: 400px;
 
-
-.Section4-text {
-  padding: 75px 200px 75px 50px;
-  min-height: 31.25rem;
-
-  @media screen and (max-width:768px) {
-    height: 100px;
-
+    }
   }
 
-  @media screen and (max-width:768px) {
-    background-color: #003060;
+  .arrow {
+    border: solid #77aede;
+    border-width: 0 0.125rem 0.125rem 0;
+    display: inline-block;
+    padding: 1.5rem;
 
-  }
-
-  .Section4-text1 {
-    color: #77aede;
-
-    @media screen and (max-width:768px) {
+    @include media-breakpoint-down(md) {
       display: none;
+
     }
   }
 
-  .Section4-text2 {
-    color: #003060;
-    font-size: 3.2rem;
-    font-weight: 600;
+  .arrow-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(135deg);
+  }
 
-    @media screen and (max-width:768px) {
-      color: white;
+  .arrow-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+  }
+
+  .carousel-indicators {
+    @include media-breakpoint-down(md) {
+      bottom: -100px;
+
     }
   }
 
-  .Section4-text3 {
-    color: #727272;
-    max-height: 200px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: initial;
+  .carousel-indicators li {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-indent: -999px;
 
-    @media screen and (max-width:768px) {
-      width: 323px;
-      color: white;
+    cursor: pointer;
+    background-color: #77aede;
+    background-clip: padding-box;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    opacity: 1;
+    transition: opacity .6s ease;
+    border-radius: 35%;
+
+    &.active {
+      background-color: #ffd500;
     }
   }
+
+
+  .Section4-text {
+    padding: 75px 200px 75px 50px;
+    min-height: 31.25rem;
+
+    @include media-breakpoint-down(md) {
+      min-height: auto;
+      background-color: #003060;
+
+    }
+
+    .Section4-text1 {
+      color: #77aede;
+
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+    }
+
+    .Section4-text2 {
+      color: #003060;
+      font-size: 3.2rem;
+      font-weight: 600;
+
+      @include media-breakpoint-down(md) {
+        color: white;
+      }
+    }
+
+    .Section4-text3 {
+      color: #727272;
+      max-height: 200px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: initial;
+
+      @include media-breakpoint-down(md) {
+        width: 323px;
+        color: white;
+        display: none;
+      }
+    }
+  }
+
 }
-
 
 // SECTION 5
 .Section5 {
@@ -568,40 +559,18 @@ body {
     display: flex;
     margin-bottom: 1.25rem;
 
-    @media screen and (max-width:768px) {
-      margin-left: 27px;
-
-      span {
-        margin-left: 3rem;
-        color: $yellow-color;
-        font-size: 1.75rem;
-      }
-
-    }
-
-    .news-container {
-      background: #003060;
-      background-size: cover;
-      padding: 20px;
-      min-height: 280px;
-      margin-bottom: 5px;
-      border-bottom: 10px solid #77aede;
-      height: 100%;
-      display: block;
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-        color: #fff;
-      }
-
-    }
-
     span {
       margin-left: 3rem;
       color: $yellow-color;
       font-size: 1.75rem;
     }
+
+
+    @include media-breakpoint-down(md) {
+      padding-left: 1.25rem !important;
+      padding-right: 1.25rem !important;
+    }
+
 
   }
 
@@ -615,8 +584,6 @@ body {
     height: 100%;
     display: block;
     text-decoration: none;
-
-    @media screen and (max-width:768px) {}
 
     &:hover {
       text-decoration: underline;
@@ -640,21 +607,15 @@ body {
     .news-text3 {
       color: $yellow-color;
       font-size: 18px;
-
-      .destacada-text {
-        padding: 25px 140px 0px 25px;
-        font-weight: 400;
-
-        @include media-breakpoint-down(md) {
-          height: 100vh;
-        }
-      }
     }
+
   }
+
 
   .margin-botom-1 {
     margin-bottom: 1rem;
   }
+
 
   .destacada-container {
     background-repeat: no-repeat;
@@ -665,53 +626,65 @@ body {
     display: block;
 
     .destacada-text {
-      padding: 25px 140px 0px 25px;
+      padding: 1.5625rem;
+      width: 75%;
       font-weight: 400;
+
+      @include media-breakpoint-down(md) {
+        height: 100vh;
+      }
     }
   }
 
+  @include media-breakpoint-down(md) {
+    // font-size: 1rem;
+
+    .news-container-mobile {
+
+      .slick-slide {
+        margin: 0 1.25rem;
+      }
+    }
 
 
 
-  // FOOTER
+  }
+
+}
+
+// FOOTER
+
+.Footer {
+
+  @include media-breakpoint-down(md) {
+    background-image: url(/cade/wp-content/themes/cade/img/img-backgroundfooter-cade.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+  }
 
   .site-footer {
 
-    @media screen and (max-width:768px) {
-      margin-left: 75px;
-      width: 203px;
-      background-image: url(/wp-content/themes/cade/img/img-backgroundfooter-cade.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
-
-
-    }
+    padding: 3.125rem 0;
 
     .site-info {
       font-size: 1.5rem;
       text-align: center;
 
-      @media screen and (max-width:768px) {
-        font-size: 1rem;
+      a {
+        color: $blue-color
+      }
 
-        .news-container-mobile {
-
-          .slick-slide {
-            margin: 0 1.25rem;
-          }
-        }
-
-
+      @include media-breakpoint-down(md) {
+        width: 25%;
+        margin: auto;
 
       }
 
 
-      // FOOTER
-
     }
 
-    a {
-      color: $blue-color
-    }
+
   }
 }
