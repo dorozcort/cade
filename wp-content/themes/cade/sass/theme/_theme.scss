@@ -385,14 +385,6 @@ body {
   }
 
   .box5 {
-    background-image: url(/wp-content/themes/cade/img/img-section3-box0.jpg);
-    background-image: url(/wp-content/themes/cade/img/img-section3-background.jpg);
-    background-size: 15rem;
-    background-repeat: no-repeat;
-    background-position: 13rem 4rem;
-    min-width: 100%;
-    padding: 2rem 0;
-
 
     @include media-breakpoint-down(md) {
       padding-top: 50px;
@@ -670,7 +662,9 @@ body {
 
 // FOOTER
 
-.Footer {
+.site-info {
+  font-size: 1.5rem;
+  text-align: center;
 
   @include media-breakpoint-down(md) {
     background-image: url(/cade/wp-content/themes/cade/img/img-backgroundfooter-cade.jpg);
@@ -678,5 +672,9 @@ body {
     background-size: cover;
     background-position: center center;
 
+  }
+
+  a {
+    color: $blue-color
   }
 }
