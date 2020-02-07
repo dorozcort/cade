@@ -111,6 +111,11 @@ $container = get_theme_mod('understrap_container_type');
 							<img class="img-carousel" src="<?php echo get_template_directory_uri(); ?>/img/img-socios11.png" alt="">
 						</div>
 						<!-- SLIDE ENDS -->
+						<!-- SLIDE STARTS -->
+						<div class="container-carousel">
+							<img class="img-carousel" src="<?php echo get_template_directory_uri(); ?>/img/img-socios12.png" alt="">
+						</div>
+						<!-- SLIDE ENDS -->
 					</div>
 				</div>
 			</div>
