@@ -1,6 +1,6 @@
 {
 	"browserSyncOptions": {
-		"proxy": "http://localhost:8888/cade/",
+		"proxy": "http://localhost/cade/",
 		"notify": false
 	},
 	"browserSyncWatchFiles": [

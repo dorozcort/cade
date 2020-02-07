@@ -154,6 +154,10 @@ gulp.task('scripts', function() {
 
     `${paths.dev}/js/skip-link-focus-fix.js`,
 
+    // End - Slick stuff
+
+    `${paths.dev}/js/slick.js`,
+
     // Adding currently empty javascript file to add on for your own themes´ customizations
     // Please add any customizations to this .js file only!
     `${paths.dev}/js/custom-javascript.js`,
@@ -236,6 +240,7 @@ gulp.task('clean-vendor-assets', function() {
     './fonts/*wesome*.{ttf,woff,woff2,eot,svg}',
     `${paths.dev}/sass/fontawesome/**`,
     `${paths.dev}/sass/underscores/**`,
+    `${paths.dev}/sass/slick/**`,
     `${paths.dev}/js/skip-link-focus-fix.js`,
     `${paths.js}/**/skip-link-focus-fix.js`,
     `${paths.js}/**/popper.min.js`,

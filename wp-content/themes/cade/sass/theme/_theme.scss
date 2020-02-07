@@ -17,6 +17,10 @@ $light-gray-color: #8d9fab;
 #page {
   background: url(/wp-content/themes/cade/img/img-background-cade.jpg) no-repeat;
   background-size: 100% 100%;
+
+  @include media-breakpoint-down(md) {
+    background-image: none;
+  }
 }
 
 *,
@@ -30,9 +34,28 @@ body {
   align-items: stretch;
 }
 
+.hide-mobile {
+  @include media-breakpoint-down(md) {
+    display: none
+  }
+}
+
 // HEADER MENU
 
 .header-menu {
+
+  .social-networks-container {
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  .img-fluid {
+    @include media-breakpoint-down(md) {
+      width: 150px;
+      margin-bottom: 30px;
+    }
+  }
 
   .nav-link {
     color: $blue-color;
@@ -40,6 +63,12 @@ body {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.2rem;
+
+    @include media-breakpoint-down(md) {
+      font-size: 1rem;
+
+    }
+
   }
 
   .menu-item {
@@ -49,6 +78,12 @@ body {
     &:after {
       content: "|";
       padding: .5rem;
+
+      @include media-breakpoint-down(md) {
+        display: none;
+
+
+      }
     }
   }
 
@@ -61,11 +96,28 @@ body {
       }
     }
   }
+
+  .hamburger {
+    div {
+      width: 35px;
+      height: 2px;
+      background-color: $blue-color;
+      margin: 6px 0;
+    }
+  }
 }
 
 // SECTION 1
 
 .Section1 {
+
+  margin-top: 50px;
+
+  @include media-breakpoint-down(md) {
+    margin-top: 120px;
+    position: relative;
+  }
+
   .Section1-container {
     position: relative;
   }
@@ -80,6 +132,31 @@ body {
     padding: 30px;
     margin-right: -50px;
     transform: translateY(-50%);
+
+    @include media-breakpoint-down(md) {
+      right: 0;
+      top: 20px;
+      width: 75%;
+      font-size: 1.35rem;
+      margin-right: 0px;
+    }
+
+
+  }
+
+  .Section1-img {
+    max-width: 100%;
+
+    .section-img {
+      @include media-breakpoint-down(md) {
+        height: 100vh;
+        width: auto;
+
+        max-width: initial;
+      }
+
+
+    }
   }
 
 }
@@ -98,27 +175,47 @@ body {
 
   .Section2-carousel {
     display: flex;
+    flex-wrap: wrap;
 
+    @include media-breakpoint-down(md) {
+      justify-content: space-around;
 
-    .container-carousel {
-      padding: 10px 20px;
-      display: flex;
-      align-content: center;
-      align-items: center;
     }
 
-    .img-carousel {
-      width: 100%;
-      filter: grayscale(1);
+  }
+
+
+  .container-carousel {
+    padding: 10px 20px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+
+    @include media-breakpoint-down(md) {
+      padding: 9px 13px;
+
     }
   }
 
+  .img-carousel {
+    max-width: 55px;
+    filter: grayscale(1);
+
+
+  }
 }
+
 
 // SECTION 3
 
 .Section3 {
   padding: 6.25rem 0rem;
+
+  @include media-breakpoint-down(md) {
+    padding: 30px;
+
+
+  }
 
   .Section3-header {
     color: $yellow-color;
@@ -133,6 +230,13 @@ body {
     min-width: 100%;
     min-height: 460px;
 
+    @include media-breakpoint-down(md) {
+      background-image: none;
+
+    }
+
+
+
   }
 
   .box1 {
@@ -140,11 +244,21 @@ body {
     background-repeat: no-repeat;
     background-position: right;
 
+    @include media-breakpoint-down(md) {
+      padding: 20px 0px 20px 0px;
+
+    }
+
     .box1-text1 {
       padding: 1rem;
       background: $blue-color;
       color: #fff;
       font-size: 1rem;
+
+      @include media-breakpoint-down(md) {
+        font-size: 20px;
+
+      }
     }
 
     .box1-text2 {
@@ -160,11 +274,21 @@ body {
 
       h1 {
         font-size: 1rem;
+
+        @include media-breakpoint-down(md) {
+          font-size: 20px;
+
+        }
       }
 
       img {
         height: 8rem;
         margin-top: -42px;
+
+        @include media-breakpoint-down(md) {
+          height: 11rem;
+          margin-top: 0;
+        }
       }
     }
   }
@@ -172,6 +296,10 @@ body {
   .box2 {
     display: none;
     background-color: $light-gray-color;
+
+    @include media-breakpoint-down(md) {
+      height: fit-content;
+    }
   }
 
   .box-title {
@@ -190,6 +318,7 @@ body {
     justify-content: space-around;
     align-items: center;
     padding: 0 1rem .75rem;
+    flex-wrap: wrap;
 
     h1 {
       display: none;
@@ -197,6 +326,11 @@ body {
       font-weight: 700;
       margin: 0;
       line-height: 1;
+
+      @include media-breakpoint-down(md) {
+        font-size: 3rem;
+      }
+
     }
 
     img {
@@ -208,6 +342,9 @@ body {
   .box3 {
     display: none;
     background-color: $light-blue-color;
+
+    @include media-breakpoint-down(md) {}
+
   }
 
   .box4 {
@@ -215,6 +352,14 @@ body {
     border: 4px solid $yellow-color;
     text-align: right;
     height: 100%;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 20px;
+
+
+    }
+
+
 
     .box4-text {
       text-align: left;
@@ -229,7 +374,13 @@ body {
       position: relative;
       height: 65px;
       right: 5px;
-      margin-top: -15px;
+
+      @include media-breakpoint-down(md) {
+
+        margin-top: 0;
+        bottom: 0;
+        margin: auto;
+      }
     }
   }
 
@@ -242,6 +393,12 @@ body {
     min-width: 100%;
     padding: 2rem 0;
 
+
+    @include media-breakpoint-down(md) {
+      padding-top: 50px;
+
+    }
+
     .box5-tittle {
       color: $light-blue-color;
       font-size: 2.25rem;
@@ -251,6 +408,13 @@ body {
       font-size: 1.25rem;
       font-weight: 700;
       color: $gray-color;
+
+      @include media-breakpoint-down(md) {
+        line-height: 26px;
+        font-weight: 400;
+        font-size: 1rem;
+
+      }
     }
   }
 }
@@ -262,8 +426,27 @@ body {
 
   padding: 3.125rem 0;
 
+  .Section4-header {
+    display: none;
+
+    @include media-breakpoint-down(md) {
+      display: block;
+      color: #ffd500;
+      padding-bottom: 20px;
+      font-size: 2rem;
+
+    }
+
+  }
+
+
   .carousel {
     box-shadow: 0 10px 10px -5px #bebebe;
+
+    @include media-breakpoint-down(md) {
+      box-shadow: none;
+      width: 100%;
+    }
   }
 
   .Section4-image {
@@ -271,6 +454,11 @@ body {
     background-size: cover;
     background-position: center;
     max-height: 34.375rem;
+
+    @include media-breakpoint-down(md) {
+      height: 400px;
+
+    }
   }
 
   .arrow {
@@ -278,6 +466,11 @@ body {
     border-width: 0 0.125rem 0.125rem 0;
     display: inline-block;
     padding: 1.5rem;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+
+    }
   }
 
   .arrow-prev {
@@ -292,6 +485,13 @@ body {
     transform: translateY(-50%) rotate(-45deg);
   }
 
+  .carousel-indicators {
+    @include media-breakpoint-down(md) {
+      bottom: -100px;
+
+    }
+  }
+
   .carousel-indicators li {
     box-sizing: content-box;
     flex: 0 1 auto;
@@ -300,6 +500,7 @@ body {
     margin-right: 10px;
     margin-left: 10px;
     text-indent: -999px;
+
     cursor: pointer;
     background-color: #77aede;
     background-clip: padding-box;
@@ -319,8 +520,18 @@ body {
     padding: 75px 200px 75px 50px;
     min-height: 31.25rem;
 
+    @include media-breakpoint-down(md) {
+      min-height: auto;
+      background-color: #003060;
+
+    }
+
     .Section4-text1 {
       color: #77aede;
+
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
     }
 
     .Section4-text2 {
@@ -328,6 +539,9 @@ body {
       font-size: 3.2rem;
       font-weight: 600;
 
+      @include media-breakpoint-down(md) {
+        color: white;
+      }
     }
 
     .Section4-text3 {
@@ -336,8 +550,15 @@ body {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: initial;
+
+      @include media-breakpoint-down(md) {
+        width: 323px;
+        color: white;
+        display: none;
+      }
     }
   }
+
 }
 
 // SECTION 5
@@ -359,6 +580,13 @@ body {
       color: $yellow-color;
       font-size: 1.75rem;
     }
+
+
+    @include media-breakpoint-down(md) {
+      padding-left: 1.25rem !important;
+      padding-right: 1.25rem !important;
+    }
+
 
   }
 
@@ -395,13 +623,15 @@ body {
     .news-text3 {
       color: $yellow-color;
       font-size: 18px;
-
     }
+
   }
+
 
   .margin-botom-1 {
     margin-bottom: 1rem;
   }
+
 
   .destacada-container {
     background-repeat: no-repeat;
@@ -412,21 +642,41 @@ body {
     display: block;
 
     .destacada-text {
-      padding: 25px 140px 0px 25px;
+      padding: 1.5625rem;
+      width: 75%;
       font-weight: 400;
+
+      @include media-breakpoint-down(md) {
+        height: 100vh;
+      }
     }
   }
 
+  @include media-breakpoint-down(md) {
+    // font-size: 1rem;
+
+    .news-container-mobile {
+
+      .slick-slide {
+        margin: 0 1.25rem;
+      }
+    }
+
+
+
+  }
 
 }
 
 // FOOTER
 
-.site-info {
-  font-size: 1.5rem;
-  text-align: center;
+.Footer {
 
-  a {
-    color: $blue-color
+  @include media-breakpoint-down(md) {
+    background-image: url(/cade/wp-content/themes/cade/img/img-backgroundfooter-cade.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
   }
 }

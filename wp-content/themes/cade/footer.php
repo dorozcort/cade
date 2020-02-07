@@ -16,7 +16,7 @@ $container = get_theme_mod('understrap_container_type');
 
 <?php get_template_part('sidebar-templates/sidebar', 'footerfull'); ?>
 
-<div class="wrapper" id="wrapper-footer">
+<div class="" id="wrapper-footer">
 
 	<div class="<?php echo esc_attr($container); ?>">
 
@@ -24,13 +24,9 @@ $container = get_theme_mod('understrap_container_type');
 
 			<div class="col-md-12">
 
-				<footer class="site-footer" id="colophon">
+				<footer id="colophon">
 
-					<div class="site-info" id="contacto">
 
-						Contacto: <a href="mailto:info@cadenergia.org">info@cadenergia.org</a> | <a href="tel:+5491148728374">+5411 4872-8374</a>
-
-					</div><!-- .site-info -->
 
 				</footer><!-- #colophon -->
 
