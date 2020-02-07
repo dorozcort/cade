@@ -94,6 +94,12 @@ $container = get_theme_mod('understrap_container_type');
 
 							</a>
 						<?php endif; ?>
+						<?php if (get_theme_mod('linkedin_setting_name') != "") : ?>
+							<a href="<?php echo get_theme_mod('linkedin_setting_name'); ?>">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/icn-linkedin.png" alt="">
+
+							</a>
+						<?php endif; ?>
 					</div>
 					<?php if ('container' == $container) : ?>
 					</div><!-- .container -->

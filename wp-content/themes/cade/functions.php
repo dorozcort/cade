@@ -224,5 +224,22 @@ function starter_customize_register($wp_customize)
 			)
 		)
 	);
+	$wp_customize->add_setting('linkedin_setting_name', array(
+		'default'   => '',
+		'transport' => 'refresh',
+	));
+
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'instagram',
+			array(
+				'label'    => __('Instagram', 'understrap'),
+				'section'  => 'starter_new_section_name',
+				'settings' => 'linkedin_setting_name',
+				'type'     => 'text'
+			)
+		)
+	);
 }
 add_action('customize_register', 'starter_customize_register');

@@ -15,7 +15,7 @@ $light-gray-color: #8d9fab;
 // LAYOUT
 
 #page {
-  background: url(/cade/wp-content/themes/cade/img/img-background-cade.jpg) no-repeat;
+  background: url(/wp-content/themes/cade/img/img-background-cade.jpg) no-repeat;
   background-size: 100% 100%;
 }
 
@@ -122,10 +122,11 @@ body {
 
   .Section3-header {
     color: $yellow-color;
+    display: none;
   }
 
   .img-backgraund {
-    background-image: url(/cade/wp-content/themes/cade/img/img-section3-background.jpg);
+    background-image: url(/wp-content/themes/cade/img/img-section3-background.jpg);
     background-size: 15rem;
     background-repeat: no-repeat;
     background-position: 13rem 4rem;
@@ -234,7 +235,7 @@ body {
 
   .box5 {
     background-image: url(/wp-content/themes/cade/img/img-section3-box0.jpg);
-    background-image: url(/cade/wp-content/themes/cade/img/img-section3-background.jpg);
+    background-image: url(/wp-content/themes/cade/img/img-section3-background.jpg);
     background-size: 15rem;
     background-repeat: no-repeat;
     background-position: 13rem 4rem;
