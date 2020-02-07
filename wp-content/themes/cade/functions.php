@@ -232,9 +232,9 @@ function starter_customize_register($wp_customize)
 	$wp_customize->add_control(
 		new WP_Customize_Control(
 			$wp_customize,
-			'instagram',
+			'linkedin',
 			array(
-				'label'    => __('Instagram', 'understrap'),
+				'label'    => __('Linkedin', 'understrap'),
 				'section'  => 'starter_new_section_name',
 				'settings' => 'linkedin_setting_name',
 				'type'     => 'text'

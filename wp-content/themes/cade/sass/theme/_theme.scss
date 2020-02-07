@@ -164,8 +164,6 @@ body {
 // SECTION 2
 
 .Section2 {
-
-  padding: 0 15%;
   color: $gray-color;
 
   .Section2-text {
@@ -175,9 +173,9 @@ body {
 
   .Section2-carousel {
     display: flex;
-    flex-wrap: wrap;
-
+    
     @include media-breakpoint-down(md) {
+      flex-wrap: wrap;
       justify-content: space-around;
 
     }
@@ -198,7 +196,7 @@ body {
   }
 
   .img-carousel {
-    max-width: 55px;
+    width: 100%;
     filter: grayscale(1);
 
 
@@ -385,6 +383,10 @@ body {
   }
 
   .box5 {
+
+    .img-section3-box0{
+      transform: translateX(-35px);
+    }
 
     @include media-breakpoint-down(md) {
       padding-top: 50px;
@@ -662,9 +664,7 @@ body {
 
 // FOOTER
 
-.site-info {
-  font-size: 1.5rem;
-  text-align: center;
+.Footer{
 
   @include media-breakpoint-down(md) {
     background-image: url(/cade/wp-content/themes/cade/img/img-backgroundfooter-cade.jpg);
@@ -674,7 +674,14 @@ body {
 
   }
 
+.site-info {
+  font-size: 1.5rem;
+  text-align: center;
+
+ 
+
   a {
     color: $blue-color
   }
+}
 }
