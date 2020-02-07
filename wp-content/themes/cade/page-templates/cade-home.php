@@ -125,7 +125,7 @@ $container = get_theme_mod('understrap_container_type');
 
 	<section class="Section3" id="nosotros">
 
-		<div class="img-backgraund container-fluid">
+		<div class="img-background container-fluid">
 			<div class="row">
 				<div class="col-sm-7 offset-sm-3">
 					<div class="Section3-header">
