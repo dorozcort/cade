@@ -219,12 +219,13 @@ body {
     color: $yellow-color;
     display: none;
   }
+  
 
   .img-background {
-    background-image: url(/cade/wp-content/themes/cade/img/img-section3-background.jpg);
+    background-image: url(/wp-content/themes/cade/img/img-section3-background.jpg);
     background-size: 15rem;
     background-repeat: no-repeat;
-    background-position: 13rem 4rem;
+    background-position: 11rem 2rem;
     min-width: 100%;
     min-height: 460px;
 
@@ -385,7 +386,7 @@ body {
   .box5 {
 
     .img-section3-box0{
-      transform: translateX(-35px);
+      transform: translateX(-30px);
     }
 
     @include media-breakpoint-down(md) {
@@ -667,7 +668,7 @@ body {
 .Footer{
 
   @include media-breakpoint-down(md) {
-    background-image: url(/cade/wp-content/themes/cade/img/img-backgroundfooter-cade.jpg);
+    background-image: url(/wp-content/themes/cade/img/img-backgroundfooter-cade.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;

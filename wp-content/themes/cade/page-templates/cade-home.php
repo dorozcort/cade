@@ -184,7 +184,7 @@ $container = get_theme_mod('understrap_container_type');
 										<p class="box5-text">Consideramos que el desarrollo de los recursos energéticos permitirá el
 											crecimiento de la actividad productiva y la expansión económica, promoviendo el progreso del país.
 										</p>
-										<img src="<?php echo get_template_directory_uri(); ?>/img/img-section3-box0.jpg" class="img-section3-box0"/>
+										<img src="<?php echo get_template_directory_uri(); ?>/img/img-section3-box0.png" class="img-section3-box0"/>
 									</div>
 								</div>
 							</div>
