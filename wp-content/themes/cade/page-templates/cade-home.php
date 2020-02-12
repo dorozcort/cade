@@ -184,7 +184,12 @@ $container = get_theme_mod('understrap_container_type');
 										<p class="box5-text">Consideramos que el desarrollo de los recursos energéticos permitirá el
 											crecimiento de la actividad productiva y la expansión económica, promoviendo el progreso del país.
 										</p>
-										<img src="<?php echo get_template_directory_uri(); ?>/img/img-section3-box0.png" class="img-section3-box0"/>
+										<img src="<?php echo get_template_directory_uri(); ?>/img/img-section3-box0.png" class="img-section3-box0" />
+										<div class="mobile-images">
+											<img src="<?php echo get_template_directory_uri(); ?>/img/icn-box2.svg" class="img-fluid" />
+											<img src="<?php echo get_template_directory_uri(); ?>/img/icn-box3.svg" class="img-fluid" />
+											<img src="<?php echo get_template_directory_uri(); ?>/img/icn-box4.svg" class="img-fluid" />
+										</div>
 									</div>
 								</div>
 							</div>
@@ -402,7 +407,7 @@ $container = get_theme_mod('understrap_container_type');
 				<div class="site-footer">
 					<div class="site-info">
 
-						Contacto: <a href="mailto:info@cadenergia.org">info@cadenergia.org</a> | <a href="tel:+5491148728374">+5411 4872-8374</a>
+						Contacto: <a href="mailto:info@cadenergia.org">info@cadenergia.org</a> <span class="hide-mobile">|</span> <a href="tel:+5491148728374">+5411 4872-8374</a>
 
 					</div><!-- .site-info -->
 				</div>

@@ -170,7 +170,7 @@ gulp.task('scripts', function() {
       })
     )
     .pipe(concat('theme.min.js'))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest(paths.js));
 
   return gulp

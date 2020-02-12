@@ -19,7 +19,8 @@ $light-gray-color: #8d9fab;
   background-size: 100% 100%;
 
   @include media-breakpoint-down(md) {
-    background-image: none;
+    background: url(/wp-content/themes/cade/img/img-background-cademobile.jpeg) no-repeat;
+    background-size: 100% 100%;
   }
 }
 
@@ -44,9 +45,12 @@ body {
 
 .header-menu {
 
-  .social-networks-container {
-    @include media-breakpoint-down(sm) {
-      display: none;
+  background: transparent;
+
+  .navbar-collapse {
+    @include media-breakpoint-down(md) {
+      background: #fff;
+      padding: 0px 30px;
     }
   }
 
@@ -67,6 +71,10 @@ body {
     @include media-breakpoint-down(md) {
       font-size: 1rem;
 
+    }
+
+    &.active {
+      color: $yellow-color;
     }
 
   }
@@ -111,10 +119,10 @@ body {
 
 .Section1 {
 
-  margin-top: 50px;
+  margin-top: 170px;
 
   @include media-breakpoint-down(md) {
-    margin-top: 120px;
+    margin-top: 250px;
     position: relative;
   }
 
@@ -136,8 +144,8 @@ body {
     @include media-breakpoint-down(md) {
       right: 0;
       top: 20px;
-      width: 75%;
-      font-size: 1.35rem;
+      width: 85%;
+      font-size: 1.1rem;
       margin-right: 0px;
     }
 
@@ -147,12 +155,16 @@ body {
   .Section1-img {
     max-width: 100%;
 
+    @include media-breakpoint-down(md) {
+      overflow: hidden;
+    }
+
     .section-img {
       @include media-breakpoint-down(md) {
-        height: 100vh;
-        width: auto;
-
-        max-width: initial;
+        height: 80vh;
+        width: auto !important;
+        max-width: unset;
+        transform: translateX(-47%);
       }
 
 
@@ -173,11 +185,18 @@ body {
 
   .Section2-carousel {
     display: flex;
-    
+
     @include media-breakpoint-down(md) {
       flex-wrap: wrap;
       justify-content: space-around;
 
+    }
+
+    .container-carousel {
+      @include media-breakpoint-down(md) {
+        flex-basis: 33.33%;
+        margin: 10px;
+      }
     }
 
   }
@@ -207,11 +226,10 @@ body {
 // SECTION 3
 
 .Section3 {
-  padding: 6.25rem 0rem;
+  padding: 6.25rem 0rem 3rem;
 
   @include media-breakpoint-down(md) {
     padding: 30px;
-
 
   }
 
@@ -219,11 +237,11 @@ body {
     color: $yellow-color;
     display: none;
   }
-  
+
 
   .img-background {
     background-image: url(/wp-content/themes/cade/img/img-section3-background.jpg);
-    background-size: 15rem;
+    background-size: 25rem;
     background-repeat: no-repeat;
     background-position: 11rem 2rem;
     min-width: 100%;
@@ -255,7 +273,7 @@ body {
       font-size: 1rem;
 
       @include media-breakpoint-down(md) {
-        font-size: 20px;
+        font-size: 1.125rem;
 
       }
     }
@@ -275,8 +293,7 @@ body {
         font-size: 1rem;
 
         @include media-breakpoint-down(md) {
-          font-size: 20px;
-
+          font-size: 1.125rem;
         }
       }
 
@@ -286,7 +303,6 @@ body {
 
         @include media-breakpoint-down(md) {
           height: 11rem;
-          margin-top: 0;
         }
       }
     }
@@ -385,8 +401,26 @@ body {
 
   .box5 {
 
-    .img-section3-box0{
+    .img-section3-box0 {
       transform: translateX(-30px);
+
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+    }
+
+    .mobile-images {
+      display: none;
+
+      @include media-breakpoint-down(md) {
+        display: flex;
+        justify-content: space-between;
+
+        img {
+          width: 30%;
+        }
+      }
+
     }
 
     @include media-breakpoint-down(md) {
@@ -397,6 +431,12 @@ body {
     .box5-tittle {
       color: $light-blue-color;
       font-size: 2.25rem;
+
+      @include media-breakpoint-down(md) {
+        color: #77aede;
+        font-size: 1.55rem;
+        font-weight: 700;
+      }
     }
 
     .box5-text {
@@ -560,6 +600,10 @@ body {
 .Section5 {
   padding: 3.125rem 0 9.5rem;
 
+  @include media-breakpoint-down(md) {
+    padding: 3.125rem 0;
+  }
+
   .align-stretch {
     align-items: stretch;
   }
@@ -657,6 +701,42 @@ body {
       }
     }
 
+    .slick-dots {
+
+      bottom: -50px;
+
+      li {
+
+        button {
+
+          box-sizing: content-box;
+          flex: 0 1 auto;
+          width: 10px;
+          height: 10px;
+          margin-right: 10px;
+          margin-left: 10px;
+          text-indent: -999px;
+
+          cursor: pointer;
+          background-color: #77aede;
+          background-clip: padding-box;
+          border-top: 10px solid transparent;
+          border-bottom: 10px solid transparent;
+          opacity: 1;
+          transition: opacity .6s ease;
+          border-radius: 35%;
+
+        }
+
+        &.slick-active {
+          button {
+            background-color: #ffd500;
+          }
+        }
+      }
+
+    }
+
 
 
   }
@@ -665,24 +745,35 @@ body {
 
 // FOOTER
 
-.Footer{
+.Footer {
 
   @include media-breakpoint-down(md) {
-    background-image: url(/wp-content/themes/cade/img/img-backgroundfooter-cade.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-
+    padding: 3.125rem 0;
   }
 
-.site-info {
-  font-size: 1.5rem;
-  text-align: center;
+  // @include media-breakpoint-down(md) {
+  //   background-image: url(/wp-content/themes/cade/img/img-backgroundfooter-cade.jpg);
+  //   background-repeat: no-repeat;
+  //   background-size: cover;
+  //   background-position: center center;
 
- 
+  // }
 
-  a {
-    color: $blue-color
+  .site-info {
+    font-size: 1.5rem;
+    text-align: center;
+
+    @include media-breakpoint-down(md) {
+      width: 50%;
+      margin: auto;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+
+
+
+    a {
+      color: $blue-color
+    }
   }
-}
 }
