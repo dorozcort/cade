@@ -16,7 +16,7 @@ $container = get_theme_mod('understrap_container_type');
 ?>
 
 <?php if (is_front_page()) : ?>
-	<?php get_template_part('global-templates/hero'); ?>
+<?php get_template_part('global-templates/hero'); ?>
 <?php endif; ?>
 
 
@@ -30,12 +30,16 @@ $container = get_theme_mod('understrap_container_type');
 				<div class="col-xs-12 col-sm-12 col-lg-10 px-0">
 					<div class="Section1-container">
 						<div class="Section1-img">
-							<img class="section-img w-100" src="<?php echo get_template_directory_uri(); ?>/img/img-section1.jpg" alt="">
+							<img class="section-img w-100"
+								src="<?php echo get_template_directory_uri(); ?>/img/img-section1.jpg" alt="">
 						</div>
 						<div class="Section1-text">
-							<p>Representamos a empresas líderes del sector energético dedicadas al estudio y la posibilidad de
-								articular nuevas formas de colaboración institucional. Además, aunamos esfuerzos conjuntos para
-								promover mejoras estratégicas a través de una forma de gestionar ética y transparente. </p>
+							<p>Representamos a empresas líderes del sector energético dedicadas al estudio y la
+								posibilidad de
+								articular nuevas formas de colaboración institucional. Además, aunamos esfuerzos
+								conjuntos para
+								promover mejoras estratégicas a través de una forma de gestionar ética y transparente.
+							</p>
 
 						</div>
 					</div>
@@ -53,69 +57,83 @@ $container = get_theme_mod('understrap_container_type');
 			<div class="row">
 				<div class="col-lg-12 px-0">
 					<div class="Section2-text">
-						<p>Liderada por el máximo nivel ejecutivo de las compañías con presencia en la cadena energética.</p>
+						<p>Liderada por el máximo nivel ejecutivo de las compañías con presencia en la cadena
+							energética.</p>
 					</div>
 					<div class="Section2-carousel">
 						<!-- SLIDE STARTS -->
 						<div class="container-carousel">
-							<img class="img-carousel" src="<?php echo get_template_directory_uri(); ?>/img/img-socios1.png" alt="">
+							<img class="img-carousel"
+								src="<?php echo get_template_directory_uri(); ?>/img/img-socios1.png" alt="">
 						</div>
 						<!-- SLIDE ENDS -->
 						<!-- SLIDE STARTS -->
 						<div class="container-carousel">
-							<img class="img-carousel" src="<?php echo get_template_directory_uri(); ?>/img/img-socios2.png" alt="">
+							<img class="img-carousel"
+								src="<?php echo get_template_directory_uri(); ?>/img/img-socios2.png" alt="">
 						</div>
 						<!-- SLIDE ENDS -->
 						<!-- SLIDE STARTS -->
 						<div class="container-carousel">
-							<img class="img-carousel" src="<?php echo get_template_directory_uri(); ?>/img/img-socios3.png" alt="">
+							<img class="img-carousel"
+								src="<?php echo get_template_directory_uri(); ?>/img/img-socios3.png" alt="">
 						</div>
 						<!-- SLIDE ENDS -->
 						<!-- SLIDE STARTS -->
 						<div class="container-carousel">
-							<img class="img-carousel" src="<?php echo get_template_directory_uri(); ?>/img/img-socios4.png" alt="">
+							<img class="img-carousel"
+								src="<?php echo get_template_directory_uri(); ?>/img/img-socios4.png" alt="">
 						</div>
 						<!-- SLIDE ENDS -->
 						<!-- SLIDE STARTS -->
 						<div class="container-carousel">
-							<img class="img-carousel" src="<?php echo get_template_directory_uri(); ?>/img/img-socios5.png" alt="">
+							<img class="img-carousel"
+								src="<?php echo get_template_directory_uri(); ?>/img/img-socios5.png" alt="">
 						</div>
 						<!-- SLIDE ENDS -->
 						<!-- SLIDE STARTS -->
 						<div class="container-carousel">
-							<img class="img-carousel" src="<?php echo get_template_directory_uri(); ?>/img/img-socios6.png" alt="">
+							<img class="img-carousel"
+								src="<?php echo get_template_directory_uri(); ?>/img/img-socios6.png" alt="">
 						</div>
 						<!-- SLIDE ENDS -->
 						<!-- SLIDE STARTS -->
 						<div class="container-carousel">
-							<img class="img-carousel" src="<?php echo get_template_directory_uri(); ?>/img/img-socios7.png" alt="">
+							<img class="img-carousel"
+								src="<?php echo get_template_directory_uri(); ?>/img/img-socios7.png" alt="">
 						</div>
 						<!-- SLIDE ENDS -->
 						<!-- SLIDE STARTS -->
 						<div class="container-carousel">
-							<img class="img-carousel" src="<?php echo get_template_directory_uri(); ?>/img/img-socios8.png" alt="">
+							<img class="img-carousel"
+								src="<?php echo get_template_directory_uri(); ?>/img/img-socios12.png" alt="">
 						</div>
 						<!-- SLIDE ENDS -->
 						<!-- SLIDE STARTS -->
 						<div class="container-carousel">
-							<img class="img-carousel" src="<?php echo get_template_directory_uri(); ?>/img/img-socios9.png" alt="">
+							<img class="img-carousel"
+								src="<?php echo get_template_directory_uri(); ?>/img/img-socios8.png" alt="">
 						</div>
 						<!-- SLIDE ENDS -->
 						<!-- SLIDE STARTS -->
 						<div class="container-carousel">
-							<img class="img-carousel" src="<?php echo get_template_directory_uri(); ?>/img/img-socios10.png" alt="">
+							<img class="img-carousel"
+								src="<?php echo get_template_directory_uri(); ?>/img/img-socios9.png" alt="">
 						</div>
 						<!-- SLIDE ENDS -->
 						<!-- SLIDE STARTS -->
 						<div class="container-carousel">
-							<img class="img-carousel" src="<?php echo get_template_directory_uri(); ?>/img/img-socios11.png" alt="">
+							<img class="img-carousel"
+								src="<?php echo get_template_directory_uri(); ?>/img/img-socios10.png" alt="">
 						</div>
 						<!-- SLIDE ENDS -->
 						<!-- SLIDE STARTS -->
 						<div class="container-carousel">
-							<img class="img-carousel" src="<?php echo get_template_directory_uri(); ?>/img/img-socios12.png" alt="">
+							<img class="img-carousel"
+								src="<?php echo get_template_directory_uri(); ?>/img/img-socios11.png" alt="">
 						</div>
 						<!-- SLIDE ENDS -->
+
 					</div>
 				</div>
 			</div>
@@ -135,11 +153,13 @@ $container = get_theme_mod('understrap_container_type');
 						<div class="col-lg-4">
 							<div class="box1">
 								<div class="box1-text1">
-									Abarcamos toda la cadena de producción para impulsar el desarrollo del potencial energético del
+									Abarcamos toda la cadena de producción para impulsar el desarrollo del potencial
+									energético del
 									país.
 								</div>
 								<div class="box1-text2">
-									<h1>Enfocados en la energía generada por el petróleo y gas de <b>Vaca Muerta.</b></h1>
+									<h1>Enfocados en la energía generada por el petróleo y gas de <b>Vaca Muerta.</b>
+									</h1>
 									<img src="<?php echo get_template_directory_uri(); ?>/img/icn-box1.svg">
 								</div>
 							</div>
@@ -181,14 +201,20 @@ $container = get_theme_mod('understrap_container_type');
 								<div class="col-lg-12">
 									<div class="box5">
 										<h1 class="box5-tittle">Impulsamos el desarrollo</h1>
-										<p class="box5-text">Consideramos que el desarrollo de los recursos energéticos permitirá el
-											crecimiento de la actividad productiva y la expansión económica, promoviendo el progreso del país.
+										<p class="box5-text">Consideramos que el desarrollo de los recursos energéticos
+											permitirá el
+											crecimiento de la actividad productiva y la expansión económica, promoviendo
+											el progreso del país.
 										</p>
-										<img src="<?php echo get_template_directory_uri(); ?>/img/img-section3-box0.png" class="img-section3-box0" />
+										<img src="<?php echo get_template_directory_uri(); ?>/img/img-section3-box0.png"
+											class="img-section3-box0" />
 										<div class="mobile-images">
-											<img src="<?php echo get_template_directory_uri(); ?>/img/icn-box2.svg" class="img-fluid" />
-											<img src="<?php echo get_template_directory_uri(); ?>/img/icn-box3.svg" class="img-fluid" />
-											<img src="<?php echo get_template_directory_uri(); ?>/img/icn-box4.svg" class="img-fluid" />
+											<img src="<?php echo get_template_directory_uri(); ?>/img/icn-box2.svg"
+												class="img-fluid" />
+											<img src="<?php echo get_template_directory_uri(); ?>/img/icn-box3.svg"
+												class="img-fluid" />
+											<img src="<?php echo get_template_directory_uri(); ?>/img/icn-box4.svg"
+												class="img-fluid" />
 										</div>
 									</div>
 								</div>
@@ -201,6 +227,9 @@ $container = get_theme_mod('understrap_container_type');
 	</section>
 
 	<!-- Section 4 -->
+
+	<?php if (get_theme_mod('show_proyectos')) : ?>
+
 
 	<section class="Section4" id="proyectos">
 		<div class="container-fluid">
@@ -224,12 +253,14 @@ $container = get_theme_mod('understrap_container_type');
 						<div id="Proyectos-carousel" class="carousel slide" data-ride="carousel">
 							<ol class="carousel-indicators">
 								<?php while ($proyecto_query->have_posts()) : $proyecto_query->the_post(); ?>
-									<li data-target="#Proyectos-carousel" data-slide-to="<?php echo $proyecto_query->current_post ?>" class="<?php echo $proyecto_query->current_post >= 1 ? '' : 'active'; ?>""></li>
+								<li data-target="#Proyectos-carousel"
+									data-slide-to="<?php echo $proyecto_query->current_post ?>"
+									class="<?php echo $proyecto_query->current_post >= 1 ? '' : 'active'; ?>""></li>
 			<?php endwhile; ?>
 			<?php wp_reset_postdata(); ?>
 			</ol>
 			<div class=" carousel-inner">
-										<?php
+									<?php
 										$args = array(
 											'post_type' => 'proyecto',
 											'showposts' => 10
@@ -237,27 +268,31 @@ $container = get_theme_mod('understrap_container_type');
 
 										$proyecto_query = new WP_Query($args);
 										?>
-										<?php while ($proyecto_query->have_posts()) : $proyecto_query->the_post(); ?>
-											<div class="carousel-item <?php echo $proyecto_query->current_post >= 1 ? '' : 'active'; ?>">
-												<div class="row col-same-height">
-													<div class="col-lg-6 Section4-image" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
+									<?php while ($proyecto_query->have_posts()) : $proyecto_query->the_post(); ?>
+									<div
+										class="carousel-item <?php echo $proyecto_query->current_post >= 1 ? '' : 'active'; ?>">
+										<div class="row col-same-height">
+											<div class="col-lg-6 Section4-image"
+												style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
 
-													</div>
-													<div class=" Section4-text col-lg-6">
-														<div class="Section4-text1">
-															<h2>Proyectos</h2>
-														</div>
-														<div class="Section4-text2">
-															<h1><?php the_title(); ?></h1>
-														</div>
-														<div class="Section4-text3">
-															<p><?php the_content(); ?></p>
-														</div>
-													</div>
+											</div>
+											<div class=" Section4-text col-lg-6">
+												<div class="Section4-text1">
+													<?php if (get_theme_mod('proyectos_setting_name') != "") : ?>
+													<h2><?php echo get_theme_mod('proyectos_setting_name'); ?></h2>
+													<?php endif; ?>
+												</div>
+												<div class="Section4-text2">
+													<h1><?php the_title(); ?></h1>
+												</div>
+												<div class="Section4-text3">
+													<p><?php the_content(); ?></p>
 												</div>
 											</div>
-										<?php endwhile; ?>
-										<?php wp_reset_postdata(); ?>
+										</div>
+									</div>
+									<?php endwhile; ?>
+									<?php wp_reset_postdata(); ?>
 						</div>
 						<a class="carousel-control-prev " href="#Proyectos-carousel" role="button" data-slide="prev">
 							<span class="arrow arrow-prev" aria-hidden="true"></span>
@@ -274,6 +309,8 @@ $container = get_theme_mod('understrap_container_type');
 </div>
 
 </section>
+
+<?php endif; ?>
 
 <!-- Section 5 -->
 
@@ -301,22 +338,22 @@ $container = get_theme_mod('understrap_container_type');
 							$proyecto_query = new WP_Query($args);
 							?>
 							<?php while ($proyecto_query->have_posts()) : $proyecto_query->the_post(); ?>
-								<div class="col-lg-6 mb-3">
-									<?php
+							<div class="col-lg-6 mb-3">
+								<?php
 									$link = get_field('enlace'); ?>
 
-									<a href="<?php echo esc_url($link); ?>" class="news-container" target="_blank">
-										<div class="news-text0">
-											<span><?php the_field('pretitulo'); ?></span>
-										</div>
-										<div class="news-text1">
-											<h4><?php the_title(); ?></h4>
-										</div>
-										<div class="news-text2">
-											<p><?php the_content(); ?></p>
-										</div>
-									</a>
-								</div>
+								<a href="<?php echo esc_url($link); ?>" class="news-container" target="_blank">
+									<div class="news-text0">
+										<span><?php the_field('pretitulo'); ?></span>
+									</div>
+									<div class="news-text1">
+										<h4><?php the_title(); ?></h4>
+									</div>
+									<div class="news-text2">
+										<p><?php the_content(); ?></p>
+									</div>
+								</a>
+							</div>
 							<?php endwhile; ?>
 							<?php wp_reset_postdata(); ?>
 						</div>
@@ -340,15 +377,16 @@ $container = get_theme_mod('understrap_container_type');
 						<?php while ($proyecto_query->have_posts()) : $proyecto_query->the_post(); ?>
 
 
-							<?php $link = get_field('enlace'); ?>
+						<?php $link = get_field('enlace'); ?>
 
-							<a href="<?php echo esc_url($link); ?>" target="_blank" class="destacada-container" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
-								<div class="destacada-text">
-									<h2><?php the_title(); ?></h2>
-									<div class="hide-mobile"><?php the_content(); ?></div>
-								</div>
+						<a href="<?php echo esc_url($link); ?>" target="_blank" class="destacada-container"
+							style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
+							<div class="destacada-text">
+								<h2><?php the_title(); ?></h2>
+								<div class="hide-mobile"><?php the_content(); ?></div>
+							</div>
 
-							</a>
+						</a>
 						<?php endwhile; ?>
 						<?php wp_reset_postdata(); ?>
 					</div>
@@ -375,22 +413,22 @@ $container = get_theme_mod('understrap_container_type');
 			$proyecto_query = new WP_Query($args);
 			?>
 			<?php while ($proyecto_query->have_posts()) : $proyecto_query->the_post(); ?>
-				<div class="">
-					<?php
+			<div class="">
+				<?php
 					$link = get_field('enlace'); ?>
 
-					<a href="<?php echo esc_url($link); ?>" class="news-container" target="_blank">
-						<div class="news-text0">
-							<span><?php the_field('pretitulo'); ?></span>
-						</div>
-						<div class="news-text1">
-							<h4><?php the_title(); ?></h4>
-						</div>
-						<div class="news-text2">
-							<p><?php the_content(); ?></p>
-						</div>
-					</a>
-				</div>
+				<a href="<?php echo esc_url($link); ?>" class="news-container" target="_blank">
+					<div class="news-text0">
+						<span><?php the_field('pretitulo'); ?></span>
+					</div>
+					<div class="news-text1">
+						<h4><?php the_title(); ?></h4>
+					</div>
+					<div class="news-text2">
+						<p><?php the_content(); ?></p>
+					</div>
+				</a>
+			</div>
 			<?php endwhile; ?>
 			<?php wp_reset_postdata(); ?>
 		</div>
@@ -407,7 +445,8 @@ $container = get_theme_mod('understrap_container_type');
 				<div class="site-footer">
 					<div class="site-info">
 
-						Contacto: <a href="mailto:info@cadenergia.org">info@cadenergia.org</a> <span class="hide-mobile">|</span> <a href="tel:+5491148728374">+5411 4872-8374</a>
+						Contacto: <a href="mailto:info@cadenergia.org">info@cadenergia.org</a> <span
+							class="hide-mobile">|</span> <a href="tel:+5491148728374">+5411 4872-8374</a>
 
 					</div><!-- .site-info -->
 				</div>

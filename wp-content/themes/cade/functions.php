@@ -159,6 +159,7 @@ function mytheme_customize_register($wp_customize)
 	);
 
 	// ..repeat ->add_setting() and ->add_control() for mytheme_company-division
+
 }
 add_action('customize_register', 'mytheme_customize_register');
 
@@ -241,5 +242,49 @@ function starter_customize_register($wp_customize)
 			)
 		)
 	);
+
+	// PROYECTOS SECTION
+
+	$wp_customize->add_section('proyectos_new_section_name', array(
+		'title'    => __('Proyectos', 'starter'),
+		'priority' => 20
+	));
+
+	$wp_customize->add_setting('proyectos_setting_name', array(
+		'default'   => '',
+		'transport' => 'refresh',
+	));
+
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'proyectos_setting_name',
+			array(
+				'label'    => __('Nombre sección', 'understrap'),
+				'section'  => 'proyectos_new_section_name',
+				'settings' => 'proyectos_setting_name',
+				'type'     => 'text'
+			)
+		)
+	);
+
+	$wp_customize->add_setting('show_proyectos', array(
+		'default'    => '1'
+	));
+	
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'show_proyectos',
+			array(
+				'label'     => __('Mostrar Sección', 'understrap'),
+				'section'   => 'proyectos_new_section_name',
+				'settings'  => 'show_proyectos',
+				'type'      => 'checkbox',
+			)
+		)
+	);
+
+
 }
 add_action('customize_register', 'starter_customize_register');
