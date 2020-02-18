@@ -106,7 +106,7 @@ $container = get_theme_mod('understrap_container_type');
 						<!-- SLIDE STARTS -->
 						<div class="container-carousel">
 							<img class="img-carousel"
-								src="<?php echo get_template_directory_uri(); ?>/img/img-socios12.png" alt="">
+								src="<?php echo get_template_directory_uri(); ?>/img/img-socios13.png" alt="">
 						</div>
 						<!-- SLIDE ENDS -->
 						<!-- SLIDE STARTS -->
@@ -216,6 +216,16 @@ $container = get_theme_mod('understrap_container_type');
 											<img src="<?php echo get_template_directory_uri(); ?>/img/icn-box4.svg"
 												class="img-fluid" />
 										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-12">
+									<div class="box6">
+										<div class="box6-text"><p><b>CADE</b> cuenta con la cooperación técnica e institucional 
+										del<b> INSTITUTO ARGENTINO DEL PETRÓLEO Y DEL GAS</b></div>
+										<img src="<?php echo get_template_directory_uri(); ?>/img/img-section3-box6.png"
+											class="img-section3-box6" />
 									</div>
 								</div>
 							</div>
@@ -436,6 +446,22 @@ $container = get_theme_mod('understrap_container_type');
 
 	</div>
 </section>
+
+<!-- Section 6 -->
+<section class="Section6">
+	<div class="informes-container row align-items-center justify-content-center desktop-version">
+		<div class="row">
+			<div class="col-lg-10">
+				<input class=" news-section6 form-control form-text required" placeholder="E-mail" data-drupal-selector="edit-email" type="text" id="edit-email" name="email" value="" size="80" maxlength="255" required="required" aria-required="true">
+				<div class="btn-section6">
+					<button type="button" class="btn btn-primary btn-lg">Quiero recibir novedades</button></div>
+        	 </div>
+		</div>
+	</div>
+
+</section>
+
+<!-- Footer -->
 
 <section class="Footer" id="contacto">
 

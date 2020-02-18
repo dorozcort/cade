@@ -16,11 +16,11 @@ $light-gray-color: #8d9fab;
 // LAYOUT
 
 #page {
-  background: url(/wp-content/themes/cade/img/img-background-cade.jpg) no-repeat;
+  background: url(/cade/wp-content/themes/cade/img/img-background-cade.jpg) no-repeat;
   background-size: 100% 100%;
 
   @include media-breakpoint-down(md) {
-    background: url(/wp-content/themes/cade/img/img-background-cademobile.jpeg) no-repeat;
+    background: url(/cade/wp-content/themes/cade/img/img-background-cademobile.jpeg) no-repeat;
     background-size: 100% 100%;
   }
 }
@@ -241,7 +241,7 @@ body {
 
 
   .img-background {
-    background-image: url(/wp-content/themes/cade/img/img-section3-background.jpg);
+    background-image: url(/cade/wp-content/themes/cade/img/img-section3-background.jpg);
     background-size: 25rem;
     background-repeat: no-repeat;
     background-position: 11rem 2rem;
@@ -452,6 +452,22 @@ body {
 
       }
     }
+  }
+
+  .box6 {
+    display: flex;
+    padding-top: 30px;
+    font-size: 22px;
+
+    .box6-text {
+      color: $gray-color;
+    }
+
+    .img-section3-box6 {
+      width: 124px;
+    }
+
+
   }
 }
 
@@ -743,6 +759,33 @@ body {
 
 }
 
+//SECTION 6
+.Section6 {
+  padding: 2rem 0 12.5rem;
+
+  .news-section6 {
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 0;
+    padding-left: 0;
+  }
+
+  .btn-section6 {
+    padding-top: 20px;
+    text-align: center;
+
+    .btn {
+      border-radius: 0;
+      background-color: #213361;
+      color: white;
+      font-size: 25px;
+      font-weight: 300;
+      padding: 0px 7px;
+    }
+
+  }
+}
+
 // FOOTER
 
 .Footer {
@@ -752,7 +795,7 @@ body {
   }
 
   // @include media-breakpoint-down(md) {
-  //   background-image: url(/wp-content/themes/cade/img/img-backgroundfooter-cade.jpg);
+  //   background-image: url(/cade/wp-content/themes/cade/img/img-backgroundfooter-cade.jpg);
   //   background-repeat: no-repeat;
   //   background-size: cover;
   //   background-position: center center;
